@@ -1,0 +1,6 @@
+tar zxvf zlib-1.2.8.tar.gz
+cd zlib-1.2.8
+rm -f Makefile Makefile.in configure
+rm -f CMakeLists.txt zlib.map zconf.h.cmakein zlib.pc.cmakein
+rm -f make_vms.com zconf.in.h zlib2ansi zlib.3 zlib.3.pdf zlib.pc.in
+rm -rf amiga as400 contrib doc examples msdos nintendods old qnx test watcom win32

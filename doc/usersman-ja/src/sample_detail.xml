@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.detail">
+  <title>各ファイルの詳細</title>
+
+  <xi:include href='sample_detail_xnparticle.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnpbook.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnpconference.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnpdata.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnpfiles.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnpmemo.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnpmodel.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnppresentation.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnppaper.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnpsimulator.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnpstimulus.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnptool.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_xnpurl.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_all1.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_all2.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_index.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_article.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_binder.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_book.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_conference.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_data.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_file.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_memo.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_model.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_presentation.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_paper.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_simulator.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_stimulus.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_tool.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_url.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_all1_v40.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample_detail_all2_v40.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+
+</section>

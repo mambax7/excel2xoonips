@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="config.tmplfile_predefined">
+  <title>予約済み定義変数</title>
+  <para>XML テンプレートファイルには，システムが自動で設定する値として以下の
+変数が予約されています．</para>
+  <simplesect>
+    <title><![CDATA[<{$system.item_id}>]]></title>
+    <para>Excel 表から XML データを出力する際，Excel ファイル内の全データの通し番号を順に置換します．</para>
+  </simplesect>
+  <simplesect>
+    <title><![CDATA[<{$system.itemtype}>]]></title>
+    <para>アイテムタイプ名(モジュールディレクトリ名) に置換します．</para>
+  </simplesect>
+  <simplesect>
+    <title><![CDATA[<{$system.now}>]]></title>
+    <para>プログラム実行時の日時（ISO8601 準拠の文字列）に置換します．</para>
+  </simplesect>
+</section>

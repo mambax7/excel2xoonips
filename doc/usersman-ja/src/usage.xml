@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<chapter id="usage">
+  <title>プログラムの利用手順</title>
+
+  <section id="usage.excel">
+    <title><application>Excel</application> ファイルの準備</title>
+    <para>まず，<application>XooNIps</application> に登録したいデータを 1行 1アイテムで記述した <application>Excel</application> 表を準備します．<application>Excel</application> 表に入力するメタデータの項目はアイテムタイプ毎に異なるため，複数のシートもしくはファイルに分けてデータを入力する必要があります．雛型となる Excel ファイルは配布物の sample ディレクトリ内に用意されていますのでそちらを必要に応じてコピーしてご利用下さい．配布物に含まれるサンプルファイルについては『<xref linkend="sample"/>』を参照してください．</para>
+    <blockquote>
+      <informalfigure>
+	<mediaobject>
+	  <imageobject role="fo">
+	    <imagedata fileref="images/UsageExcel.gif" format="GIF" width="77.1mm"/> <!-- 514px * 0.15 = 77.1mm -->
+	  </imageobject>
+	  <imageobject role="html">
+	    <imagedata fileref="images/UsageExcel.gif"/>
+	  </imageobject>
+	</mediaobject>
+      </informalfigure>
+    </blockquote>
+    <para>作成した <application>Excel</application> 表を <application>Excel</application> 97-2003 ブック形式 で任意のファイル名を付けてで保存します．</para>
+    <blockquote>
+      <informalfigure>
+	<mediaobject>
+	  <imageobject role="fo">
+	    <imagedata fileref="images/UsageExcelSave.gif" format="GIF" width="74.1mm"/> <!-- 494px * 0.15 = 74.1mm -->
+	  </imageobject>
+	  <imageobject role="html">
+	    <imagedata fileref="images/UsageExcelSave.gif"/>
+	  </imageobject>
+	</mediaobject>
+	</informalfigure>
+    </blockquote>
+  </section>
+  
+  <section id="usage.excel2xoonips">
+    <title>XooNIps のインポート形式のファイルへの変換</title>
+    <para>作成し保存した <application>Excel</application> ファイルを以下のように <application>excel2xoonips</application> コマンドを実行して <application>XooNIps</application> のインポート形式のファイルに変換します．</para>
+    <blockquote>
+      <para><programlisting><![CDATA[$ excel2xoonips [-i] [-c] Excel.xls XooNIpsImport.zip]]></programlisting></para>
+    </blockquote>
+    <para>このとき <application>excel2xoonips</application> コマンドに与える引数は以下のようになります．</para>
+    <orderedlist>
+      <listitem>
+	<para>-c : <application>XooNIps v3.4</application> のインポート形式のファイルに変換します．デフォルトは<application>XooNIps v4.0</application> のインポート形式のファイルに変換します．</para>
+      </listitem>
+      <listitem>
+	<para>-i : Excel ファイルがインデックスのみの場合に指定します．<application>XooNIps v3.4</application> のみに有効です.</para>
+      </listitem>
+      <listitem>
+	<para><filename>Excel.xls</filename> : 変換元のデータが記述された Excel ファイル</para>
+      </listitem>
+      <listitem>
+	<para><filename>XooNIpsImport.zip</filename> : 変換先の <application>XooNIps</application> のインポート形式のファイル</para>
+      </listitem>
+    </orderedlist>
+  </section>
+  
+  <section id="usage.import">
+    <title><application>XooNIps</application> へのインポート</title>
+    <para>出力された <application>XooNIps</application> のインポート形式のファイルをサイトへインポートします．</para>
+	    <section id="usage.import34">
+	      <title>XooNIps バージョン3.4</title>
+	    <orderedlist>
+	      <listitem>
+		<para>ユーザメニューから『インポート』を選択します．</para>
+		<blockquote>
+		  <informalfigure>
+		    <mediaobject>
+		      <imageobject role="fo">
+			<imagedata fileref="images/UsageXooNIpsUserMenu.gif" format="GIF" width="90mm"/> <!-- 600px * 0.15 = 90mm -->
+		      </imageobject>
+		      <imageobject role="html">
+			<imagedata fileref="images/UsageXooNIpsUserMenu.gif"/>
+		      </imageobject>
+		    </mediaobject>
+		  </informalfigure>
+		</blockquote>
+	      </listitem>
+	      <listitem>
+		<para><application>XooNIps</application> のインポート形式のファイルおよびインポート先インデックスを指定し，『次へ』ボタンを押下します．</para>
+		<blockquote>
+		  <informalfigure>
+		    <mediaobject>
+		      <imageobject role="fo">
+			<imagedata fileref="images/UsageXooNIpsMain.gif" format="GIF" width="90mm"/> <!-- 600px * 0.15 = 90mm -->
+		      </imageobject>
+		      <imageobject role="html">
+			<imagedata fileref="images/UsageXooNIpsMain.gif"/>
+		      </imageobject>
+		    </mediaobject>
+		  </informalfigure>
+		</blockquote>
+	      </listitem>
+	      <listitem>
+		<para>インポートの確認画面で衝突するアイテムの確認などを行います．衝突するアイテムがない場合警告は表示されません．また，入力されたファイルに不整合がある場合，この画面でインポートできない旨が表示されます．インポート可能な場合『インポート』ボタンを押下してインポート操作を実行を開始します．</para>
+		<blockquote>
+		  <informalfigure>
+		    <mediaobject>
+		      <imageobject role="fo">
+			<imagedata fileref="images/UsageXooNIpsCheck.gif" format="GIF" width="90mm"/> <!-- 600px * 0.15 = 90mm -->
+			</imageobject>
+		      <imageobject role="html">
+			<imagedata fileref="images/UsageXooNIpsCheck.gif"/>
+		      </imageobject>
+		    </mediaobject>
+		  </informalfigure>
+		</blockquote>
+	      </listitem>
+	      <listitem>
+		<para>以上でインポートが完了します．</para>
+		<blockquote>
+		  <informalfigure>
+		    <mediaobject>
+		      <imageobject role="fo">
+			<imagedata fileref="images/UsageXooNIpsResults.gif" format="GIF" width="90mm"/> <!-- 600px * 0.15 = 90mm -->
+		      </imageobject>
+		      <imageobject role="html">
+			<imagedata fileref="images/UsageXooNIpsResults.gif"/>
+		      </imageobject>
+		    </mediaobject>
+		  </informalfigure>
+		</blockquote>
+	      </listitem>
+	    </orderedlist>
+	  </section>
+	  
+	  <section id="usage.import4.0">
+	      <title>XooNIps バージョン4.0</title>
+	    <orderedlist>
+	      <listitem>
+		<para>ユーザメニューから『アイテムインポート』を選択します．</para>
+		<blockquote>
+		  <informalfigure>
+		    <mediaobject>
+		      <imageobject role="fo">
+			<imagedata fileref="images/UsageXooNIpsUserMenu40.gif" format="GIF" width="90mm"/> <!-- 600px * 0.15 = 90mm -->
+		      </imageobject>
+		      <imageobject role="html">
+			<imagedata fileref="images/UsageXooNIpsUserMenu40.gif"/>
+		      </imageobject>
+		    </mediaobject>
+		  </informalfigure>
+		</blockquote>
+	      </listitem>
+	      <listitem>
+		<para><application>XooNIps</application> のインポート形式のファイルおよびインポート先インデックスを指定し，『登録』ボタンを押下します．</para>
+		<blockquote>
+		  <informalfigure>
+		    <mediaobject>
+		      <imageobject role="fo">
+			<imagedata fileref="images/UsageXooNIpsMain40.gif" format="GIF" width="90mm"/> <!-- 600px * 0.15 = 90mm -->
+		      </imageobject>
+		      <imageobject role="html">
+			<imagedata fileref="images/UsageXooNIpsMain40.gif"/>
+		      </imageobject>
+		    </mediaobject>
+		  </informalfigure>
+		</blockquote>
+	      </listitem>
+	      <listitem>
+		<para>以上でインポートが完了します．</para>
+		<blockquote>
+		  <informalfigure>
+		    <mediaobject>
+		      <imageobject role="fo">
+			<imagedata fileref="images/UsageXooNIpsResults40.gif" format="GIF" width="90mm"/> <!-- 600px * 0.15 = 90mm -->
+		      </imageobject>
+		      <imageobject role="html">
+			<imagedata fileref="images/UsageXooNIpsResults40.gif"/>
+		      </imageobject>
+		    </mediaobject>
+		  </informalfigure>
+		</blockquote>
+	      </listitem>
+	    </orderedlist>
+	  </section>
+  </section>  
+</chapter>

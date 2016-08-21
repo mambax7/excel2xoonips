@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="config.inifile.format">
+  <title>書式</title>
+  <para>ファイル内は以下の書式で Excel 表のカラムの情報を一行毎に記述します．各行を上から順に読み込み，それぞれ Excel 表のカラムに割り当てていきます．</para>
+  <para><programlisting><![CDATA[
+(変数名):(書式):(必須条件)
+(変数名):(書式):(必須条件) # (コメント)
+(変数名1,変数名2):(書式):(必須条件)
+...:...:...
+...:...:...
+# (コメント)
+...:...:...]]></programlisting></para>
+
+  <simplesect id="config.inifile.format.varname">
+    <title>変数名</title>
+    <itemizedlist>
+      <listitem>
+        <para>列データを置換する際の目印となる XML テンプレートファイルの変数名．</para>
+      </listitem>
+      <listitem>
+        <para>, で区切ることにより複数の変数名と置換可能．</para>
+      </listitem>
+    </itemizedlist>
+  </simplesect>
+
+  <simplesect id="config.inifile.format.format">
+    <title>書式</title>
+    <itemizedlist>
+      <listitem>
+        <para>列データの入力を受け付ける書式．</para>
+      </listitem>
+      <listitem>
+        <para>以下のいずれかの定数パターンを指定する．</para>
+        <itemizedlist>
+          <listitem>
+            <para>string</para>
+            <itemizedlist>
+              <listitem>
+                <para>文字列を受け付ける</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>int</para>
+            <itemizedlist>
+              <listitem>
+                <para>整数値を受け付ける</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>bool</para>
+            <itemizedlist>
+              <listitem>
+                <para>論理値（『TRUE』/『FALSE』）を受け付ける</para>
+              </listitem>
+              <listitem>
+                <para>変数へ置換する際はそれぞれ FALSE = 0, TRUE = 1 となる．</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>select(a,b,c)</para>
+            <itemizedlist>
+              <listitem>
+                <para>指定された文字列の選択肢 a,b,c のいずれかを受け付ける．</para>
+              </listitem>
+              <listitem>
+                 <para>a,b,c の部分は任意．</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>array(tag) or array(tag,'sep')</para>
+            <itemizedlist>
+              <listitem>
+                <para>複数の文字列を配列データとして受け付ける．</para>
+              </listitem>
+              <listitem>
+                <para>前者の書式 array(tag) は 後者の書式 array(tag,'\n') と同じ．</para>
+              </listitem>
+              <listitem>
+                <para>sep は複数の文字列の区切り文字を表す．ここで \n は改行を表し，C言語と同じ文字列のエスケープ書式を用いる．</para>
+              </listitem>
+              <listitem>
+                <para><application>XooNIps v3.4</application>に変数へ置換する際は配列内のデータをそれぞれ tag に指定された XML タグで囲んで並べたものを利用する．例えば array(title) と指定し，そのセルに複数行の文字列 Line1, Line2, Line3 が指定されている場合，置換後は以下のようになる．</para>
+                <para><programlisting><![CDATA[<title>Line1</title><title>Line2</title><title>Line3</title>]]></programlisting></para>
+              </listitem>
+              <listitem>
+                <para><application>XooNIps v4.0</application>に変数へ置換する際は配列内のデータをそれぞれ変数名の後尾で囲んで並べたものを利用する．例えば keywords.keyword=array(tag,'#') と指定し，そのセルに複数行の文字列 Keyword1, Keyword2, Keyword3 が指定されている場合，置換後は以下のようになる．</para>
+                <para><programlisting><![CDATA[
+<C:keyword C:type="keyword" C:keyword_id="1">Keyword1</C:keyword>
+<C:keyword C:type="keyword" C:keyword_id="2">Keyword2</C:keyword>
+<C:keyword C:type="keyword" C:keyword_id="3">Keyword3</C:keyword>
+]]></programlisting></para>
+              </listitem>
+              <listitem>
+                <para>tag および sep の部分は任意．</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>dataset(group) or dataset(group,'sep')</para>
+            <itemizedlist>
+              <listitem>
+                <para>複数の文字列を配列データセットとして受け付ける．</para>
+              </listitem>
+              <listitem>
+                <para>前者の書式 dataset(group) は 後者の書式 dataset(group,'\n') と同じ．</para>
+              </listitem>
+              <listitem>
+                <para>sep は複数の文字列の区切り文字を表す．ここで \n は改行を表し，C言語と同じ文字列のエスケープ書式を用いる．</para>
+              </listitem>
+              <listitem>
+                <para>変数へ置換する際は配列内のデータに対してそれぞれ group で指定されたデータセット領域を配列数分繰り返して用意し，各フィールドに当てはめる．例えば，テンプレートが</para>
+                <para><programlisting><![CDATA[<{dataset $group}>
+  <group>
+    <data><{$data}></data>
+  </group>
+<{/dataset}>]]></programlisting></para>
+                <para>で ini ファイルが</para>
+                <para><programlisting><![CDATA[data=dataset(group,'#'):...]]></programlisting></para>
+                <para>となっており，Excel ファイル内の data のセルに d1#d2 のデータが格納されていた場合，以下の様に置換される．</para>
+                <para><programlisting><![CDATA[<group>
+  <data>d1</data>
+</group>
+<group>
+  <data>d2</data>
+</group>]]></programlisting></para>
+              </listitem>
+              <listitem>
+                <para>他のセルの dataset においても同じ group 名を共有できる．ただし，それぞれのセルにおいて同じ配列個数分のデータが必要となる．</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>lang</para>
+            <itemizedlist>
+              <listitem>
+                <para>言語文字列 (eng,jpn,fra,deu,esl,ita,dut,sve,nor,dan,fin,por, chi,kor)のいずれかを受け付ける．</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>file(file_type_name)</para>
+            <itemizedlist>
+              <listitem>
+                <para>ローカルホスト上のファイルパスを受け付ける．</para>
+              </listitem>
+              <listitem>
+                <para>変数へ置換する際は file_type_name で指定されたファイルタイプを利用し，適切なタグと置き換える．</para>
+              </listitem>
+              <listitem>
+                <para>file_type_name の箇所は XooNIps のシステムが持つファイルタイプ識別子を指定する．</para>
+              </listitem>
+              <listitem>
+                <para><application>XooNIps v4.0</application> には複数ファイルを登録する可能な項目がある.これらの項目は複数のファイル名の区切り文字として改行を使う.</para>
+              </listitem>
+              <listitem>
+                <para><application>XooNIps v3.4</application> に XML テンプレートファイルでは，以下の変数名のルールでファイルに関する詳細情報を取り出すこともできる．</para>
+                <para><programlisting><![CDATA[<{$変数名.original_file_name}>  : ファイル名
+<{$変数名.mime_type}>           : MIME Type
+<{$変数名.file_size}>           : ファイルサイズ
+<{$変数名.suffix}>              : ファイル拡張子]]></programlisting></para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>rights</para>
+            <itemizedlist>
+              <listitem>
+                <para>ライセンス情報の文字列をを受け付ける．</para>
+              </listitem>
+              <listitem>
+                <para>Some rights reserved (Creative Commons License を指定する場合，CC-BY, CC-BY-SA, CC-BY-ND, CC-BY-NC, CC-BY-NC-SA, CC-BY-NC-ND のいずれかの予約済み文字列を指定する．</para>
+              </listitem>
+              <listitem>
+                <para>上記以外の文字列を指定した際は All rights reserved となり自由記述を行う．</para>
+              </listitem>
+              <listitem>
+                <para>XML テンプレートファイルでは以下の変数名のルールで Creative Commons License に関する詳細情報を取り出すこともできる．</para>
+                <para><programlisting><![CDATA[<{$変数名.use_cc}>              : CC 利用の有無 (0:無, 1:有)
+<{$変数名.cc_commercial_use}>   : 商用利用の可否 (0:非, 1:可)
+<{$変数名.cc_modification}>     : 改変・翻訳条件 (0:禁止,
+                                 1:同一条件下で許可, 2:許可)]]></programlisting></para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
+            <para>indexes</para>
+            <itemizedlist>
+              <listitem>
+                <para>関連付けるインデックスを受け付ける．</para>
+              </listitem>
+              <listitem>
+                <para>/Public もしくは /Private から始まる文字列を指定．</para>
+              </listitem>
+              <listitem>
+                <para>複数関連付ける際は，セル内に複数行に渡り記述する．</para>
+              </listitem>
+              <listitem>
+                <para>/Private で始まるパスを1つ以上含む必要がある．</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+  </simplesect>
+
+  <simplesect id="config.inifile.format.requirement">
+    <title>必須条件</title>
+    <itemizedlist>
+      <listitem>
+        <para>その列へのデータ入力が必須かどうか．</para>
+      </listitem>
+      <listitem>
+        <para>『required』(必須)，『optional』(任意) のいずれかを指定．</para>
+      </listitem>
+    </itemizedlist>
+  </simplesect>
+
+  <simplesect id="config.inifile.format.comment">
+    <title>コメント</title>
+    <itemizedlist>
+      <listitem>
+        <para>『#』 で始まる文字列はコメントとして解釈される．</para>
+      </listitem>
+      <listitem>
+        <para>行頭が 『#』 で始まる場合，その行は無視されて次の行を次のカラム情報として引き続き読み込む．</para>
+      </listitem>
+    </itemizedlist>
+  </simplesect>
+</section>

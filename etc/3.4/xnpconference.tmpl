@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item version="1.00">
+<basic id="<{$system.item_id}>">
+<itemtype><{$system.itemtype}></itemtype>
+<titles><{$basic.titles}></titles>
+<contributor></contributor>
+<keywords></keywords>
+<description></description>
+<doi><{$basic.doi}></doi>
+<last_update_date><{$system.now}></last_update_date>
+<creation_date><{$system.now}></creation_date>
+<publication_year><{$detail.conference_from_year}></publication_year>
+<publication_month><{$detail.conference_from_month}></publication_month>
+<publication_mday><{$detail.conference_from_mday}></publication_mday>
+<lang><{$basic.lang}></lang>
+<url></url>
+<changelogs>
+</changelogs>
+<{$basic.indexes}>
+</basic>
+<detail id="<{$system.item_id}>" version="1.02">
+<conference_from_year><{$detail.conference_from_year}></conference_from_year>
+<conference_from_month><{$detail.conference_from_month}></conference_from_month>
+<conference_from_mday><{$detail.conference_from_mday}></conference_from_mday>
+<conference_to_year><{$detail.conference_to_year}></conference_to_year>
+<conference_to_month><{$detail.conference_to_month}></conference_to_month>
+<conference_to_mday><{$detail.conference_to_mday}></conference_to_mday>
+<presentation_type><{$detail.presentation_type}></presentation_type>
+<conference_title><{$detail.conference_title}></conference_title>
+<place><{$detail.place}></place>
+<authors><{$detail.authors}></authors>
+<abstract><{$detail.abstract}></abstract>
+<attachment_dl_limit><{$detail.attachment_dl_limit}></attachment_dl_limit>
+<attachment_dl_notify><{$detail.attachment_dl_notify}></attachment_dl_notify>
+<{$file.conference_file}>
+<{$file.conference_paper}>
+</detail>
+</item>

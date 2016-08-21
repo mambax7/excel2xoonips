@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.detail.stimulus">
+  <title><filename>stimulus.xls</filename></title>
+  <para><application>XooNIps v4.0</application> の Stimulus アイテムのサンプルデータファイルです．</para>
+  <para>xnpstimulus アイテムタイプモジュールのバージョン 4.0 以降に対応しています．</para>
+  <para>このアイテムタイプの認識名は stimulus です．</para>
+  <para>縦列に以下の項目持ちます．</para>
+  <orderedlist>
+    <listitem>
+      <para>ID</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ID』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.doi"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>言語</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『言語』フィールドに入力する選択肢です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.lang"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>タイトル</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『タイトル』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>フリーキーワード</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『フリーキーワード』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>概要</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『概要』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>日付</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『日付』フィールドの『年』に入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目の書式はyyyy/mm/ddです．セルの書式は文字列です.</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>刺激タイプ</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『刺激タイプ』フィールドに入力する選択肢で，以下のいずれかの入力値を指定する必要があります．</para>
+	  <informaltable frame="all" rowsep="0" colsep="1">
+	    <tgroup cols="2" align="center">
+	      <colspec colwidth="1*"/>
+	      <colspec colwidth="1*"/>
+	      <tbody>
+		<row rowsep="1"><entry>入力値</entry><entry>意味</entry></row>
+		<row><entry>picture</entry><entry>Picture</entry></row>
+		<row><entry>movie</entry><entry>Movie</entry></row>
+		<row><entry>program</entry><entry>Program</entry></row>
+		<row><entry>other</entry><entry>Other</entry></row>
+	      </tbody>
+	    </tgroup>
+	  </informaltable>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>開発者</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『開発者』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>プレビューファイルパス</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『プレビュー』フィールドに入力するファイルの<emphasis role="strong">ファイルパス</emphasis>です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">複数登録可能</emphasis>としています.</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.file"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>ファイルパス</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ファイル』フィールドに入力するファイルの<emphasis role="strong">ファイルパス</emphasis>です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.file"/>』を参照してください．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>ダウンロード制限</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ダウンロード制限』フィールドに入力する論理選択肢です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.download_limit"/>』を参照してください．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>ダウンロード通知</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ダウンロード通知』フィールドに入力する論理選択肢です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.download_notify"/>』を参照してください．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>Readme</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『Readme』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>Rights</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『Rights』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.rights"/>』を参照してください．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>インデックス</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムを関連付ける『インデックス』を指定する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.index"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+  </orderedlist>
+</section>

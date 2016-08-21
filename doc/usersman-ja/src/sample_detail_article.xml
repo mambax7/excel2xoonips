@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.detail.article">
+  <title><filename>article.xls</filename></title>
+  <para><application>XooNIps v4.0</application> の Article アイテムのサンプルデータファイルです．</para>
+  <para>xnparticle アイテムタイプモジュールのバージョン 1.32 以降に対応しています．</para>
+  <para>このアイテムタイプの認識名は article です．</para>
+  <para>縦列は<link linkend="sample.detail.xnparticle"><filename>xnparticle.xls</filename></link> と同様です．</para>
+  <para>しかし、表示 (画像ファイル)項目は<emphasis role="strong">複数登録可能</emphasis>としています.</para>
+</section>

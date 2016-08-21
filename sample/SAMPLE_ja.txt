@@ -1,0 +1,140 @@
+﻿サンプル Excel データファイル
+
+[ファイル説明]
+
+■　XooNIps v3.4
+* all1.xls
+  - 全アイテムタイプ (Article, Book, Conference, Data, File, Memo, Model,
+     Paper, Presentation, Simulator, Stimulus, Tool, Url) のサンプル．
+  - アイテムタイプ毎にシートが準備されています．
+  - 関連付けるインデックス情報がデータに埋め込まれいますので，変換したファイル
+   をインポートする際は，インデックスを指定しないでください．
+
+* all2.xls
+  - 全アイテムタイプ (Article, Book, Conference, Data, File, Memo, Model,
+     Paper, Presentation, Simulator, Stimulus, Tool, Url) のサンプル．
+  - アイテムタイプ毎にシートが準備されています．
+  - (all1.xls とは異なり，)変換したファイルをインポートする際は，関連付ける
+    インデックスを指定してください．
+
+* index.xls
+  - インデックスのサンプル．
+  - 変換の際には，excel2xoonips コマンドに -i もしくは --index 引数を付与
+    する必要があります．
+    例: $ excel2xoonips -i index.xls import.zip
+  - インポート時にインポート先のインデックスを選択することでその指定した
+    インデックスの下層にインデックスが作成されます．
+  - 機能制限として Public 等の Private 以外のインデックスにインポートする
+    際にも必ず Private のインデックスを指定する必要があります．Private の
+    インデックスが指定されない場合，Private 直下に同様のインデックスが作成
+    されます．
+  - この機能は実験的なサポートです．
+
+* xnparticle.xls
+  - Article アイテムのサンプル．
+
+* xnpbool.xls
+  - Book アイテムのサンプル
+
+* xnpconference.xls
+  - Conference アイテムのサンプル
+
+* xnpdata.xls
+  - Data アイテムのサンプル
+
+* xnpfiles.xls
+  - File アイテムのサンプル
+
+* xnpmemo.xls
+  - Memo アイテムのサンプル
+
+* xnpmodel.xls
+  - Model アイテムのサンプル
+
+* xnppaper.xls
+  - Paper アイテムのサンプル
+
+* xnppresentation.xls
+  - Presentation アイテムのサンプル
+
+* xnpsimulator.xls
+  - Simulator アイテムのサンプル
+
+* xnpstimulus.xls
+  - Stimulus アイテムのサンプル
+
+* xnptool.xls
+  - Tool アイテムのサンプル
+
+* xnpurl.xls
+  - Url アイテムのサンプル
+
+■　XooNIps v4.0
+* all1_v40.xls
+  - 全アイテムタイプ (Article, Binder, Book, Conference, Data, File, Memo, Model,
+     Paper, Presentation, Simulator, Stimulus, Tool, Url) のサンプル．
+  - アイテムタイプ毎にシートが準備されています．
+  - 関連付けるインデックス情報がデータに埋め込まれいますので，変換したファイル
+   をインポートする際は，インデックスを指定しないでください．
+
+* all2_v40.xls
+  - 全アイテムタイプ (Article, Binder, Book, Conference, Data, File, Memo, Model,
+     Paper, Presentation, Simulator, Stimulus, Tool, Url) のサンプル．
+  - アイテムタイプ毎にシートが準備されています．
+  - (all1.xls とは異なり，)変換したファイルをインポートする際は，関連付ける
+    インデックスを指定してください．
+
+* article.xls
+  - Article アイテムのサンプル．
+
+* binder.xls
+  - Binder アイテムのサンプル
+
+* bool.xls
+  - Book アイテムのサンプル
+
+* conference.xls
+  - Conference アイテムのサンプル
+
+* data.xls
+  - Data アイテムのサンプル
+
+* file.xls
+  - File アイテムのサンプル
+
+* memo.xls
+  - Memo アイテムのサンプル
+
+* model.xls
+  - Model アイテムのサンプル
+
+* paper.xls
+  - Paper アイテムのサンプル
+
+* presentation.xls
+  - Presentation アイテムのサンプル
+
+* simulator.xls
+  - Simulator アイテムのサンプル
+
+* stimulus.xls
+  - Stimulus アイテムのサンプル
+
+* tool.xls
+  - Tool アイテムのサンプル
+
+* url.xls
+  - Url アイテムのサンプル
+  
+[※ 注意点]
+
+ a) データ変換時
+    - データの中にファイルパスが書いてあるため，変換中にエラーが起こる場合
+      があります．その際は，ファイルパスを適宜変更してください．
+ 
+ b) インポート時 (データ変換後)
+    -  変換後のファイルをインポートするためにはそれぞれ対応するアイテムタイプ
+       がインストールされている必要があります．
+    - データの中にインポート先のインデックスを指定してある場合があるため，
+      エラーが起こる場合があります．その際は，あらかじめ指定されたインデッ
+      クスを作成してください．

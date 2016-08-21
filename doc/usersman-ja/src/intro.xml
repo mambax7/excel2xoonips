@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<chapter id="intro">
+  <title>はじめに</title>
+  <section id="intro.whatis">
+    <title><application>excel2xoonips</application> とは</title>
+    <para><application>excel2xoonips</application> は，<application>Excel</application> ファイル(Excel 97-2003 ブック形式)を <application>XooNIps</application> のインポート形式に変換するコマンドラインプログラムです．このプログラムを利用することにより，容易に <application>XooNIps</application> にデータを一括登録できます．</para>
+
+    <para><application>excel2xoonips</application> は，GPL ライセンスの元で <application>XooNIps</application> の開発の一環としてサポートツールとして開発されており，これらに関する最新の情報は，<ulink url="http://xoonips.sourceforge.jp/">http://xoonips.sourceforge.jp/</ulink>から入手できます．</para>
+  </section>
+
+  <section id="intro.feature">
+    <title>機能概要</title>
+    <para><application>excel2xoonips</application> は，<application>Excel</application> ファイル(Excel 97-2003 ブック形式)を <application>XooNIps</application> のインポート形式に変換するコマンドラインプログラムです．このプログラムを利用することにより，容易に <application>XooNIps</application> にデータを一括登録できます．</para>
+    <para><application>excel2xoonips</application> を用いて <application>XooNIps</application> にデータを登録するには，予め用意された 1行1アイテムのメタデータを記述した Excel ファイルに対し，このプログラムを用いて <application>XooNIps</application> のインポート形式のデータに変換します．変換された <application>XooNIps</application> のインポート形式のデータファイルを XooNIps で構築されたサイトにインポートします．これにより，ユーザの手元にある大量のデータを容易に XooNIps のサイトへデータを一括登録することができます．</para>
+    <para><application>excel2xoonips</application> で変換可能なアイテムタイプは XooNIps が標準で提供している Paper, Binder, Book, Conference, Data, File, Memo, Model, Presentation, Simulator, Stimulus, Tool, Url の 13種類に加え，学術情報リポジトリで利用されている Article の合計 14種類に対応しています．また，他のアイテムタイプへの拡張方法も準備されており，そのアイテムタイプのメタ情報の特徴を記述した定義ファイルを事前に準備することで，プログラム本体を改変することなくデータの変換の実行が可能となっています．</para>
+  </section>
+
+  <section id="intro.requirements">
+    <title>システム要件および動作環境</title>
+    <section id="intro.requirements.osindependent">
+      <title>OS 非依存プログラム</title>
+      <para><application>excel2xoonips</application> は， C 言語で実装されており，配布されているソースコードをユーザ自身でコンパイルすることにより Windows だけでなく MacOS X や Linux，Solaris 等の様々な環境で動作させることができます．</para>
+    </section>
+    <section id="intro.requirements.depencies">
+      <title>libiconv</title>
+      <para>このプログラムはオープンソースの文字コード変換ライブラリである libiconv をコンパイルする際に必要としています．<application>libiconv</application> に関する情報は， <ulink url="http://www.gnu.org/software/libiconv/">http://www.gnu.org/software/libiconv/</ulink> から入手できます．詳しくはそちらを参照してください．</para>
+    </section>
+  </section>
+  
+  <section id="intro.install">
+    <title>インストール</title>
+    
+    <para>提供されている配布パッケージは，Windows 用にコンパイル済みのバイナリ形式 および ソースコードが用意されており，<ulink url="http://sourceforge.jp/projects/xoonips/files/">http://sourceforge.jp/projects/xoonips/files/</ulink> からダウンロードできます．</para>
+    
+    <section id="intro.install.windows">
+      <title>Windows</title>
+      <para>Windows 用には，実行形式のパッケージ <filename>excel2xoonips-1.0.2-win32.zip</filename> が用意されています．</para>
+      <para>ダウンロード後，Zip ファイルを任意のディレクトリに展開することにより利用可能となります．</para>
+      
+      <blockquote>
+	<informalfigure>
+	  <mediaobject>
+	    <imageobject role="fo">
+	      <imagedata fileref="images/Install-Win32Ja.gif" format="GIF" width="79.5mm"/> <!-- 530px * 0.15 = 79.5mm) -->
+	    </imageobject>
+	    <imageobject role="html">
+	      <imagedata fileref="images/Install-Win32Ja.gif"/>
+	    </imageobject>
+	  </mediaobject>
+	</informalfigure>
+      </blockquote>
+
+    </section>
+    
+    <section id="intro.install.others">
+      <title>その他の OS</title>
+      <para>その他の OS 用には，tar.gz 形式で圧縮されたソースファイル一式 <filename>excel2xoonips-1.0.2.tar.gz</filename> が用意されており，ソースコードからコンパイルを行う必要があります．</para>
+      <orderedlist>
+        <listitem>
+          <para>ソースコード <filename>excel2xoonips-1.0.2.tar.gz</filename> をダウンロードします．</para>
+        </listitem>
+        <listitem>
+          <para>ダウンロードしたソースコードを展開します. </para>
+          <blockquote>
+            <para><programlisting><![CDATA[$ tar zxvf excel2xoonips-1.0.2.tar.gz]]></programlisting></para>
+          </blockquote>
+        </listitem>
+        <listitem>
+          <para>展開されたディレクトリに移動し，configure スクリプトを実行します. </para>
+          <blockquote>
+            <para><programlisting><![CDATA[$ cd excel2xoonips-1.0.2
+$ ./configure]]></programlisting></para>
+          </blockquote>
+          <para>このとき，configure スクリプトには，実行時の引数にインストール先(--prefix)や依存する libiconv ライブラリのパス (--with-libiconv-prefix)，実行する OS のファイルシステムで利用している文字コード(--with-filename-coding-system) などを指定することができます．詳しくは以下のコマンドを実行してみて下さい．</para>
+          <blockquote>
+	    <programlisting><![CDATA[$ ./configure --help]]></programlisting> 
+	  </blockquote>
+        </listitem>
+        <listitem>
+          <para>コンパイルします. </para>
+          <blockquote>
+            <para><programlisting><![CDATA[$ make]]></programlisting></para>
+          </blockquote>
+        </listitem>
+        <listitem>
+          <para>管理者権限を用いてインストールします．</para>
+          <blockquote>
+            <para><programlisting><![CDATA[$ su -
+# make install]]></programlisting></para>
+          </blockquote>
+        </listitem>
+      </orderedlist>
+    </section>
+  </section>
+</chapter>

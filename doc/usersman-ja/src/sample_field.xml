@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.field">
+  <title>ファイル共通の特殊な入力項目</title>
+  <para>各アイテムタイプのサンプルファイルに共通して，次のような特殊な入力を促す項目があります．</para>
+
+  <section id="sample.field.doi">
+    <title>ID</title>
+    <para>アイテムの『ID』フィールドに入力する一行の文字列です．</para>
+    <para>この値は <application>Excel</application> ファイル内の全体を通してユニークな文字列を指定する必要があります．また，インポート先の <application>XooNIps</application> 上で同じ『ID』を持つアイテムが既に登録されている場合インポートは失敗します．</para>
+  </section>
+
+  <section id="sample.field.lang">
+    <title>言語</title>
+    <para>アイテムの『言語』フィールドに入力する選択肢で，以下のいずれかの入力値を指定する必要があります．</para>
+    <informaltable frame="all" rowsep="0" colsep="1">
+      <tgroup cols="2" align="center">
+	<colspec colwidth="1*"/>
+	<colspec colwidth="1*"/>
+	<tbody>
+	  <row rowsep="1"><entry>入力値</entry><entry>意味</entry></row>
+	  <row><entry>eng</entry><entry>英語</entry></row>
+	  <row><entry>jpn</entry><entry>日本語</entry></row>
+	  <row><entry>fra</entry><entry>フランス語</entry></row>
+	  <row><entry>deu</entry><entry>ドイツ語</entry></row>
+	  <row><entry>esl</entry><entry>スペイン語</entry></row>
+	  <row><entry>ita</entry><entry>イタリア語</entry></row>
+	  <row><entry>dut</entry><entry>オランダ語</entry></row>
+	  <row><entry>sve</entry><entry>スウェーデン語</entry></row>
+	  <row><entry>nor</entry><entry>ノルウェー語</entry></row>
+	  <row><entry>dan</entry><entry>デンマーク語</entry></row>
+	  <row><entry>fin</entry><entry>フィンランド語</entry></row>
+	  <row><entry>por</entry><entry>ポルトガル語</entry></row>
+	  <row><entry>chi</entry><entry>中国語</entry></row>
+	  <row><entry>kor</entry><entry>韓国語</entry></row>
+	</tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
+  <section id="sample.field.file">
+    <title>ファイルパス</title>
+    <para>アイテムに添付するファイルのローカルシステム上のファイルパスを指定します．</para>
+    <para>このセルで指定したファイルは excel2xoonips 実行時にインポートファイルの中に取り込まれます．もしファイルが見つからなければデータの変換を中止します．</para>
+  </section>
+
+  <section id="sample.field.download_limit">
+    <title>ダウンロード制限</title>
+    <para>アイテムの『ダウンロード制限』フィールドに入力する論理選択肢で，ファイルをダウンロード可能なユーザの範囲を以下のいずれかの入力値で指定する必要があります．</para>
+    <informaltable frame="all" rowsep="0" colsep="1">
+      <tgroup cols="2" align="center">
+	<colspec colwidth="1*"/>
+	<colspec colwidth="1*"/>
+	<tbody>
+	  <row rowsep="1"><entry>入力値</entry><entry>意味</entry></row>
+	  <row><entry>TRUE</entry><entry>ログインユーザのみに限定する</entry></row>
+	  <row><entry>FALSE</entry><entry>全てのユーザを許可する</entry></row>
+	</tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
+  <section id="sample.field.download_notify">
+    <title>ダウンロード通知</title>
+    <para>アイテムの『ダウンロード通知』フィールドに入力する論理選択肢で，ファイルがダウンロードされた際にその旨を通知するか否かを以下のいずれかの入力値で指定する必要があります．</para>
+    <informaltable frame="all" rowsep="0" colsep="1">
+      <tgroup cols="2" align="center">
+	<colspec colwidth="1*"/>
+	<colspec colwidth="1*"/>
+	<tbody>
+	  <row rowsep="1"><entry>入力値</entry><entry>意味</entry></row>
+	  <row><entry>TRUE</entry><entry>通知する</entry></row>
+	  <row><entry>FALSE</entry><entry>通知しない</entry></row>
+	</tbody>
+      </tgroup>
+    </informaltable>
+    <para>ただし，『TRUE』を選択する際には <xref linkend="sample.field.download_limit"/> においても『TRUE』が選択されている必要があります．</para>
+  </section>
+
+  <section id="sample.field.rights">
+    <title>Rights</title>
+    <para>アイテムの『Rights』フィールドに入力する<emphasis role="bold">複数行</emphasis>のライセンス条項の文字列です．</para>
+    <para>特殊なルールとして，Creative Commons によるライセンス条項『Some rights reserved』を記述する際には，以下のいずれかの入力値を指定します．</para>
+    <informaltable frame="all" rowsep="0" colsep="1">
+      <tgroup cols="2" align="center">
+	<colspec colwidth="1*"/>
+	<colspec colwidth="1*"/>
+	<tbody>
+	  <row rowsep="1"><entry>入力値</entry><entry>意味</entry></row>
+	  <row><entry>CC-BY</entry><entry>表示</entry></row>
+	  <row><entry>CC-BY-SA</entry><entry>表示 - 継承</entry></row>
+	  <row><entry>CC-BY-ND</entry><entry>表示 - 改変禁止</entry></row>
+	  <row><entry>CC-BY-NC</entry><entry>表示 - 非営利</entry></row>
+	  <row><entry>CC-BY-ND-SA</entry><entry>表示 - 非営利 - 継承</entry></row>
+	  <row><entry>CC-BY-NC-ND</entry><entry>表示 - 非営利 - 改変禁止</entry></row>
+	</tbody>
+      </tgroup>
+    </informaltable>
+    <para>上記の Creative Commons によるライセンス条項以外を指定する場合，『All rights reserved』として自由記述を行います．</para>
+  </section>
+
+  <section id="sample.field.index">
+    <title>インデックス</title>
+    <para>アイテムを関連付ける『インデックス』を一行一インデックスの絶対パスで記述します．</para>
+    <para>各行は必ず『/Public』もしくは『/Private』で始まる必要があり，下層のインデックスのを指定する際は『/』で区切ります．また，『/Public』で始まるインデックスを指定する場合は必ず『/Private』で始まるインデックスも同時に指定する必要があります．</para>
+    <para>このフィールドの入力は任意で，インデックスを指定した場合は変換されたデータをインポートする際にインデックスを指定する必要はありません．逆にインデックスを指定しなかった場合，必ずインポート時にインデックスを指定する必要があります．</para>
+  </section>
+
+</section>

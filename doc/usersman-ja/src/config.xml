@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<chapter id="config">
+  <title>設定ファイル</title>
+
+  <xi:include href='config_overview.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='config_inifile.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='config_tmplfile.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+
+</chapter>

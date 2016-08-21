@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="config.tmplfile_intro">
+  <title>役割</title>
+  <para>XML テンプレートファイルは，XooNIps のインポートデータ用の XML ファイルの雛型のファイルです．</para>
+  <para>プログラム実行時に入力された Excel の Sheet 名に対応する tmpl ファイル (<filename>シート名.tmpl</filename>) が自動で読み込まれます．</para>
+  <para>プログラムの内部では入力された  Excel 表の横列毎に INI ファイルで定義された変数と書式に従い，XML テンプレートファイルで置換されインポート用の XML ファイルとして出力されます．</para>
+</section>

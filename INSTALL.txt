@@ -1,0 +1,42 @@
+How to Install:
+
+ 1) Install system dependent library 'iconv'.
+    Please find more information about iconv yourself.. :-D
+
+ 2) Run "configure" script
+
+  + case A: typical configuration
+
+    % ./configure
+
+  + case B: custom configuration
+
+    you can choice installation prefix, libiconv location and file system
+    encoding and so on. 
+
+    % ./configure \
+      --prefix=/foo/bar \
+      --with-libiconv-prefix=/foo/bar \
+      --with-filename-coding-system=EUC-JP \
+
+    if you want to get more information, run "configure" script with 
+    --help argument.
+
+    % ./configure --help
+
+
+ 3) Compile source code
+
+    % make
+
+ 4) Switch root user and install compiled binaries
+
+    % su
+    # make install
+
+
+For MS-Windows environment:
+
+  On Windows platform, you can build on MinGW/MSYS environment.
+  Visit http://www.mingw.org/ (MinGW - Minimalist GNU for Windows).
+

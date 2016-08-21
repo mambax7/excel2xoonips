@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="config.inifile_intro">
+  <title>役割</title>
+  <para>INI ファイルは，Excel 表内の縦列(カラム)の情報と XooNIps のインポートデータ用の XML テンプレートファイルの変数を対応付けるための定義ファイルです．</para>
+  <para>プログラム実行時に入力された Excel の Sheet 名に対応する ini ファイル(シート名).ini が自動で読み込まれます．</para>
+  <para>入力された  Excel 表の各セルは INI ファイルの書式に従い，パースされ XML テンプレートファイルの変数にそれぞれ置換されます．</para>
+</section>

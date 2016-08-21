@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="config.tmplfile_format">
+  <title>書式</title>
+  <para>XML テンプレートファイルにはアイテムタイプ毎のインポート用の XML ファイルの雛型を記述します．</para>
+  <para>変数は <![CDATA[<{$ と }>]]> のタグで囲みます（例 <![CDATA[<{$variable}>]]>）．システムはこのタグ <![CDATA[<{$...}>]]> を目印 に INI ファイルで定義された変数と置換します．</para>
+  <para>例えば <![CDATA[<{$variable}>]]> のタグは INI ファイル内に定義された variable 変数のカラムのデータに変換されます．このとき variable は任意の文字列です．</para>
+</section>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.view">
+  <title><application>Excel</application> 表の概観</title>
+  <para>各サンプルファイルに共通して以下のような概観を持っています．</para>
+  <blockquote>
+    <informalfigure>
+      <mediaobject>
+        <imageobject role="fo">
+          <imagedata fileref="images/SampleView.gif" format="GIF" width="92.55mm"/> <!-- 514px * 0.15 = 77.16mm -->
+        </imageobject>
+        <imageobject role="html">
+          <imagedata fileref="images/SampleView.gif"/>
+        </imageobject>
+      </mediaobject>
+    </informalfigure>
+  </blockquote>
+  <para>タイトルラベルの色が淡い緑の項目は任意入力，ピンクの項目は必須入力をそれぞれ表します．</para>
+  <para>シート名でアイテムタイプの種類を識別します．それぞれのアイテムタイプに識別名については『<xref linkend="sample.detail"/>』を参照してください．</para>
+</section>

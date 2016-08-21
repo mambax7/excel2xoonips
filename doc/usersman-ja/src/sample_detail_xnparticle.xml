@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.detail.xnparticle">
+  <title><filename>xnparticle.xls</filename></title>
+  <para><application>XooNIps v3.4</application> の Article アイテムのサンプルデータファイルです．</para>
+  <para>xnparticle アイテムタイプモジュールのバージョン 1.32 以降に対応しています．</para>
+  <para>このアイテムタイプの認識名は xnparticle です．</para>
+  <para>縦列に以下の項目持ちます．</para>
+  <orderedlist>
+    <listitem>
+      <para>ID</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ID』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.doi"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>タイトル</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『タイトル : タイトル』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>タイトル(カナ)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『タイトル : カナ』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>タイトル(ローマ字)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『タイトル : ローマ字』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>別タイトル</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『別タイトル : 名前』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『別タイトル (カナ)』，『別タイトル (ローマ字)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>別タイトル (カナ)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『別タイトル : カナ』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『別タイトル』，『別タイトル (ローマ字)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>別タイトル (ローマ字)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『別タイトル : ローマ字』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『別タイトル』，『別タイトル (カナ)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>著者 (著者 ID)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『著者 : 著者 ID』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『著者 (名前)』，『著者 (カナ)』，『著者 (ローマ字)』，『著者 (所属)』，『著者 (所属:翻訳)』，『著者 (役割)』，『著者 (外部リンク)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>著者 (名前)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『著者 : 著者』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『著者 (著者 ID)』，『著者 (カナ)』，『著者 (ローマ字)』，『著者 (所属)』，『著者 (所属:翻訳)』，『著者 (役割)』，『著者 (外部リンク)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>著者 (カナ)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『著者 : カナ』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『著者 (著者 ID)』，『著者 (名前)』，『著者 (ローマ字)』，『著者 (所属)』，『著者 (所属:翻訳)』，『著者 (役割)』，『著者 (外部リンク)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>著者 (ローマ字)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『著者 : ローマ字』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『著者 (著者 ID)』，『著者 (名前)』，『著者 (カナ)』，『著者 (所属)』，『著者 (所属:翻訳)』，『著者 (役割)』，『著者 (外部リンク)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>著者 (所属)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『著者 : 所属』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『著者 (著者 ID)』，『著者 (名前)』，『著者 (カナ)』，『著者 (ローマ字)』，『著者 (所属:翻訳)』，『著者 (役割)』，『著者 (外部リンク)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>著者 (所属:翻訳)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『著者 : 所属(翻訳)』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『著者 (著者 ID)』，『著者 (名前)』，『著者 (カナ)』，『著者 (ローマ字)』，『著者 (所属)』，『著者 (役割)』，『著者 (外部リンク)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>著者 (役割)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『著者 : 役割』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『著者 (著者 ID)』，『著者 (名前)』，『著者 (カナ)』，『著者 (ローマ字)』，『著者 (所属)』，『著者 (所属:翻訳)』，『著者 (外部リンク)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>著者 (外部リンク)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『著者 : 外部リンク』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．また，複数入力する際には，『著者 (著者 ID)』，『著者 (名前)』，『著者 (カナ)』，『著者 (ローマ字)』，『著者 (所属)』，『著者 (所属:翻訳)』，『著者 (役割)』の入力を同じ個数にする必要があります．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>版</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『版』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>出版地</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『出版地』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>出版者 (名前)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『出版者 : 名前』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>出版者 (カナ)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『出版者 : カナ』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>出版者 (ローマ字)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『出版者 : ローマ字』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>日付 (出版年 F)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『日付 : 出版年』フィールドの開始年に入力する『yyyy』 形式の一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>日付 (出版年 T)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『日付 : 出版年』フィールドの終了年に入力する『yyyy』 形式の一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>日付 (作成日)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『日付 : 作成日』フィールドに入力する『yyyy-mm-dd』 形式の一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>日付 (更新日)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『日付 : 更新日』フィールドに入力する『yyyy-mm-dd』 形式の一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>日付 (記録日)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『日付 : 記録日』フィールドに入力する『yyyy-mm-dd』 形式の一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>形態</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『形態』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>上位タイトル (名前)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『上位タイトル : 名前』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>上位タイトル (翻訳)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『上位タイトル : 翻訳』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>上位タイトル (巻)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『上位タイトル : 巻』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>上位タイトル (号)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『上位タイトル : 号』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>上位タイトル (年月次 : 年)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『上位タイトル : 年月次 : 年』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>上位タイトル (年月次 : 月)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『上位タイトル : 年月次 : 月』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>上位タイトル (ページ : 開始)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『上位タイトル : ページ : 開始』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>上位タイトル (ページ : 終了)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『上位タイトル : ページ : 終了』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>識別番号 (ISSN)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『識別番号 : ISSN』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>識別番号 (ISBN)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『識別番号 : ISBN』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>識別番号 (DOI)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『識別番号 : DOI』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>識別番号 (URI)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『識別番号 : URI』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>識別番号 (その他)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『識別番号 : その他』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>妙録</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『妙録』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>目次</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『目次』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>キーワード</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『キーワード』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>NDC</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『NDC』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>注記</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『注記』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>言語</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『言語』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>資源タイプ</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『資源タイプ』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>ジャンル</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ジャンル』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>表示 (画像ファイル)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『このアイテムを表示する : 画像 : ファイル』フィールドに入力するファイルの<emphasis role="strong">ファイルパス</emphasis>です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.file"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>表示 (本文ファイル)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『このアイテムを表示する : 本文』フィールドに入力するファイルの<emphasis role="strong">ファイルパス</emphasis>です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.file"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>表示 (URI)</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『このアイテムを表示する : URI』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目はリピータブルフィールドに対応しており，『#』 文字を区切文字とすることで複数の入力を受け付けることができます．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>アクセス条件</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『アクセス条件』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>インデックス</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムを関連付ける『インデックス』を指定する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.index"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+  </orderedlist>
+</section>

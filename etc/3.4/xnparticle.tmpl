@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item version="1.00">
+<basic id="<{$system.item_id}>">
+<itemtype><{$system.itemtype}></itemtype>
+<titles>
+  <title><{$detail.title}></title>
+  <title><{$detail.title_kana}></title>
+  <title><{$detail.title_romaji}></title>
+</titles>
+<contributor></contributor>
+<keywords>
+  <{$basic.keywords}>
+</keywords>
+<description><{$basic.description}></description>
+<doi><{$basic.doi}></doi>
+<last_update_date><{$system.now}></last_update_date>
+<creation_date><{$system.now}></creation_date>
+<publication_year>0</publication_year>
+<publication_month>0</publication_month>
+<publication_mday>0</publication_mday>
+<lang></lang>
+<url></url>
+<changelogs></changelogs>
+<{$basic.indexes}>
+</basic>
+<detail id="<{$system.item_id}>">
+<title><{$detail.title}></title>
+<title_kana><{$detail.title_kana}></title_kana>
+<title_romaji><{$detail.title_romaji}></title_romaji>
+<{dataset $detail.sub_title}>
+<sub_title>
+  <sub_title_name><{$sub_title_name}></sub_title_name>
+  <sub_title_kana><{$sub_title_kana}></sub_title_kana>
+  <sub_title_romaji><{$sub_title_romaji}></sub_title_romaji>
+</sub_title>
+<{/dataset}>
+<{dataset $detail.author}>
+<author>
+  <author_id><{$author_id}></author_id>
+  <author_name><{$author_name}></author_name>
+  <author_kana><{$author_kana}></author_kana>
+  <author_romaji><{$author_romaji}></author_romaji>
+  <author_affiliation><{$author_affiliation}></author_affiliation>
+  <author_affiliation_translation><{$author_affiliation_translation}></author_affiliation_translation>
+  <author_role><{$author_role}></author_role>
+  <author_link><{$author_link}></author_link>
+</author>
+<{/dataset}>
+<edition><{$detail.edition}></edition>
+<publish_place><{$detail.publish_place}></publish_place>
+<publisher><{$detail.publisher}></publisher>
+<publisher_kana><{$detail.publisher_kana}></publisher_kana>
+<publisher_romaji><{$detail.publisher_romaji}></publisher_romaji>
+<year_f><{$detail.year_f}></year_f>
+<year_t><{$detail.year_t}></year_t>
+<date_create><{$detail.date_create}></date_create>
+<date_update><{$detail.date_update}></date_update>
+<date_record><{$detail.date_record}></date_record>
+<jtitle><{$detail.jtitle}></jtitle>
+<jtitle_translation><{$detail.jtitle_translation}></jtitle_translation>
+<jtitle_volume><{$detail.jtitle_volume}></jtitle_volume>
+<jtitle_issue><{$detail.jtitle_issue}></jtitle_issue>
+<jtitle_year><{$detail.jtitle_year}></jtitle_year>
+<jtitle_month><{$detail.jtitle_month}></jtitle_month>
+<jtitle_spage><{$detail.jtitle_spage}></jtitle_spage>
+<jtitle_epage><{$detail.jtitle_epage}></jtitle_epage>
+<abstract><{$detail.abstract}></abstract>
+<table_of_contents><{$detail.table_of_contents}></table_of_contents>
+<keywords>
+  <{$basic.keywords}>
+</keywords>
+<ndc_classifications>
+  <{$detail.ndc_classifications}>
+</ndc_classifications>
+<physical_descriptions>
+  <{$detail.physical_descriptions}>
+</physical_descriptions>
+<langs>
+  <{$detail.langs}>
+</langs>
+<id_issns>
+  <{$detail.id_issns}>
+</id_issns>
+<id_isbns>
+  <{$detail.id_isbns}>
+</id_isbns>
+<id_dois>
+  <{$detail.id_dois}>
+</id_dois>
+<id_uris>
+  <{$detail.id_uris}>
+</id_uris>
+<id_locals>
+  <{$detail.id_locals}>
+</id_locals>
+<uris>
+  <{$detail.uris}>
+</uris>
+<type_of_resource><{$detail.type_of_resource}></type_of_resource>
+<genre><{$detail.genre}></genre>
+<access_condition><{$detail.access_condition}></access_condition>
+<self_doi><{$detail.self_doi}></self_doi>
+<naid><{$detail.naid}></naid>
+<ichushi><{$detail.ichushi}></ichushi>
+<textversion><{$detail.textversion}></textversion>
+<grant_id><{$detail.grant_id}></grant_id>
+<date_of_granted><{$detail.date_of_granted}></date_of_granted>
+<degree_name><{$detail.degree_name}></degree_name>
+<grantor><{$detail.grantor}></grantor>
+<{$file.preview}>
+<{$file.article_attachment}>
+</detail>
+</item>

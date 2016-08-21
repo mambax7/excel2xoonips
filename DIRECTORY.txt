@@ -1,0 +1,15 @@
+Directories Layout:
+  |- README.txt          Description of this product
+  |- COPYING.txt         License information
+  |- INSTALL.txt         How to install document
+  |- DIRECTORY.txt       This file
+  +- doc                 Additional documents
+  +- etc                 Configuration files
+  +- sample              Example Excel files
+  +- cexcel              A library to read Excel data
+  +- cole                A library to read OLE2 file system
+  +- excel2xoonips       Main source code of this product
+  +- libsl4              A library for basic C algorithm
+  +- macros              GNU Autoconf/Automake macros
+  +- oniguruma           A library for regular expression
+  +- zlib                A library for file compression

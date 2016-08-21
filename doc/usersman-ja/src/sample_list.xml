@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.list">
+  <title>ファイル一覧</title>
+  <para>配布物の sample ディレクトリ下に様々な Excel ファイルのサンプルが用意されています．</para>
+  <itemizedlist>
+    <listitem>
+      <para><link linkend="sample.detail.xnparticle"><filename>xnparticle.xls</filename></link> : <application>XooNIps v3.4</application> の　Article アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnpbook"><filename>xnpbook.xls</filename></link> : <application>XooNIps v3.4</application> の　Book アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnpconference"><filename>xnpconference.xls</filename></link> : <application>XooNIps v3.4</application> の　Conference アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnpdata"><filename>xnpdata.xls</filename></link> : <application>XooNIps v3.4</application> の　Data アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnpfiles"><filename>xnpfiles.xls</filename></link> : <application>XooNIps v3.4</application> の　File アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnpmemo"><filename>xnpmemo.xls</filename></link> : <application>XooNIps v3.4</application> の　Memo アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnpmodel"><filename>xnpmodel.xls</filename></link> : <application>XooNIps v3.4</application> の　Model アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnppresentation"><filename>xnppresentation.xls</filename></link> : <application>XooNIps v3.4</application> の　Presentation アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnppaper"><filename>xnppaper.xls</filename></link> : <application>XooNIps v3.4</application> の　Paper アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnpsimulator"><filename>xnpsimulator.xls</filename></link> : <application>XooNIps v3.4</application> の　Simulator アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnpstimulus"><filename>xnpstimulus.xls</filename></link> : <application>XooNIps v3.4</application> の　Stimulus アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnptool"><filename>xnptool.xls</filename></link> : <application>XooNIps v3.4</application> の　Tool アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.xnpurl"><filename>xnpurl.xls</filename></link> : <application>XooNIps v3.4</application> の　Url アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.all1"><filename>all1.xls</filename></link> : <application>XooNIps v3.4</application> の全アイテムタイプ 1</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.all2"><filename>all2.xls</filename></link> : <application>XooNIps v3.4</application> の全アイテムタイプ 2</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.index"><filename>index.xls</filename></link> : インデックス</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.article"><filename>article.xls</filename></link> : <application>XooNIps v4.0</application> の　Article アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.binder"><filename>binder.xls</filename></link> : <application>XooNIps v4.0</application> の　Binder アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.book"><filename>book.xls</filename></link> : <application>XooNIps v4.0</application> の　Book アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.conference"><filename>conference.xls</filename></link> : <application>XooNIps v4.0</application> の　Conference アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.data"><filename>data.xls</filename></link> : <application>XooNIps v4.0</application> の　Data アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.file"><filename>file.xls</filename></link> : <application>XooNIps v4.0</application> の　File アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.memo"><filename>memo.xls</filename></link> : <application>XooNIps v4.0</application> の　Memo アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.model"><filename>model.xls</filename></link> : <application>XooNIps v4.0</application> の　Model アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.presentation"><filename>presentation.xls</filename></link> : <application>XooNIps v4.0</application> の　Presentation アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.paper"><filename>paper.xls</filename></link> : <application>XooNIps v4.0</application> の　Paper アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.simulator"><filename>simulator.xls</filename></link> : <application>XooNIps v4.0</application> の　Simulator アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.stimulus"><filename>stimulus.xls</filename></link> : <application>XooNIps v4.0</application> の　Stimulus アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.tool"><filename>tool.xls</filename></link> : <application>XooNIps v4.0</application> の　Tool アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.url"><filename>url.xls</filename></link> : <application>XooNIps v4.0</application> の　Url アイテムタイプ</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.all1_v40"><filename>all1_v40.xls</filename></link> : <application>XooNIps v4.0</application> の全アイテムタイプ 1</para>
+    </listitem>
+    <listitem>
+      <para><link linkend="sample.detail.all2_v40"><filename>all2_v40.xls</filename></link> : <application>XooNIps v4.0</application> の全アイテムタイプ 2</para>
+    </listitem>
+  </itemizedlist>
+</section>

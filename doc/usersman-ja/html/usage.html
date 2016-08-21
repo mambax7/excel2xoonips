@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head xmlns="http://www.w3.org/1999/xhtml">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>第2章 プログラムの利用手順</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.78.1" />
+    <link rel="home" href="index.html" title="excel2xoonips" />
+    <link rel="up" href="index.html" title="excel2xoonips" />
+    <link rel="prev" href="intro.html" title="第1章 はじめに" />
+    <link rel="next" href="sample.html" title="第3章 Excel ファイルのサンプル集" />
+  </head>
+  <body>
+    <div id="page">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="navheader">
+        <table width="100%" summary="Navigation header">
+          <tr>
+            <td width="20%" align="left"><a accesskey="p" href="intro.html"><img src="images/etc/prev.gif" alt="戻る" /></a> </td>
+            <th width="60%" align="center"> </th>
+            <td width="20%" align="right"> <a accesskey="n" href="sample.html"><img src="images/etc/next.gif" alt="次へ" /></a></td>
+          </tr>
+        </table>
+        <hr />
+      </div>
+      <div xmlns="http://www.w3.org/1999/xhtml" class="chapter" id="usage">
+        <div xmlns="" class="titlepage">
+          <div>
+            <div>
+              <h1 xmlns="http://www.w3.org/1999/xhtml" class="title">第2章 プログラムの利用手順</h1>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="usage.excel">
+          <div xmlns="" class="titlepage">
+            <div>
+              <div>
+                <h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both">1. <span class="application">Excel</span> ファイルの準備</h2>
+              </div>
+            </div>
+          </div>
+          <p>まず，<span class="application">XooNIps</span> に登録したいデータを 1行 1アイテムで記述した <span class="application">Excel</span> 表を準備します．<span class="application">Excel</span> 表に入力するメタデータの項目はアイテムタイプ毎に異なるため，複数のシートもしくはファイルに分けてデータを入力する必要があります．雛型となる Excel ファイルは配布物の sample ディレクトリ内に用意されていますのでそちらを必要に応じてコピーしてご利用下さい．配布物に含まれるサンプルファイルについては『<a class="xref" href="sample.html" title="第3章 Excel ファイルのサンプル集">3章<em><span class="application">Excel</span> ファイルのサンプル集</em></a>』を参照してください．</p>
+          <div class="blockquote">
+            <blockquote class="blockquote">
+              <div class="informalfigure">
+                <div class="mediaobject">
+                  <img src="images/UsageExcel.gif" />
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <p>作成した <span class="application">Excel</span> 表を <span class="application">Excel</span> 97-2003 ブック形式 で任意のファイル名を付けてで保存します．</p>
+          <div class="blockquote">
+            <blockquote class="blockquote">
+              <div class="informalfigure">
+                <div class="mediaobject">
+                  <img src="images/UsageExcelSave.gif" />
+                </div>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+        <div class="section" id="usage.excel2xoonips">
+          <div xmlns="" class="titlepage">
+            <div>
+              <div>
+                <h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both">2. XooNIps のインポート形式のファイルへの変換</h2>
+              </div>
+            </div>
+          </div>
+          <p>作成し保存した <span class="application">Excel</span> ファイルを以下のように <span class="application">excel2xoonips</span> コマンドを実行して <span class="application">XooNIps</span> のインポート形式のファイルに変換します．</p>
+          <div class="blockquote">
+            <blockquote class="blockquote">
+              <pre class="programlisting">$ excel2xoonips [-i] [-c] Excel.xls XooNIpsImport.zip</pre>
+            </blockquote>
+          </div>
+          <p>このとき <span class="application">excel2xoonips</span> コマンドに与える引数は以下のようになります．</p>
+          <div class="orderedlist">
+            <ol class="orderedlist" type="1">
+              <li class="listitem">
+                <p>-c : <span class="application">XooNIps v3.4</span> のインポート形式のファイルに変換します．デフォルトは<span class="application">XooNIps v4.0</span> のインポート形式のファイルに変換します．</p>
+              </li>
+              <li class="listitem">
+                <p>-i : Excel ファイルがインデックスのみの場合に指定します．<span class="application">XooNIps v3.4</span> のみに有効です.</p>
+              </li>
+              <li class="listitem">
+                <p><code class="filename">Excel.xls</code> : 変換元のデータが記述された Excel ファイル</p>
+              </li>
+              <li class="listitem">
+                <p><code class="filename">XooNIpsImport.zip</code> : 変換先の <span class="application">XooNIps</span> のインポート形式のファイル</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="section" id="usage.import">
+          <div xmlns="" class="titlepage">
+            <div>
+              <div>
+                <h2 xmlns="http://www.w3.org/1999/xhtml" class="title" style="clear: both">3. <span class="application">XooNIps</span> へのインポート</h2>
+              </div>
+            </div>
+          </div>
+          <p>出力された <span class="application">XooNIps</span> のインポート形式のファイルをサイトへインポートします．</p>
+          <div class="section" id="usage.import34">
+            <div xmlns="" class="titlepage">
+              <div>
+                <div>
+                  <h3 xmlns="http://www.w3.org/1999/xhtml" class="title">3.1. XooNIps バージョン3.4</h3>
+                </div>
+              </div>
+            </div>
+            <div class="orderedlist">
+              <ol class="orderedlist" type="1">
+                <li class="listitem">
+                  <p>ユーザメニューから『インポート』を選択します．</p>
+                  <div class="blockquote">
+                    <blockquote class="blockquote">
+                      <div class="informalfigure">
+                        <div class="mediaobject">
+                          <img src="images/UsageXooNIpsUserMenu.gif" />
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </li>
+                <li class="listitem">
+                  <p><span class="application">XooNIps</span> のインポート形式のファイルおよびインポート先インデックスを指定し，『次へ』ボタンを押下します．</p>
+                  <div class="blockquote">
+                    <blockquote class="blockquote">
+                      <div class="informalfigure">
+                        <div class="mediaobject">
+                          <img src="images/UsageXooNIpsMain.gif" />
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </li>
+                <li class="listitem">
+                  <p>インポートの確認画面で衝突するアイテムの確認などを行います．衝突するアイテムがない場合警告は表示されません．また，入力されたファイルに不整合がある場合，この画面でインポートできない旨が表示されます．インポート可能な場合『インポート』ボタンを押下してインポート操作を実行を開始します．</p>
+                  <div class="blockquote">
+                    <blockquote class="blockquote">
+                      <div class="informalfigure">
+                        <div class="mediaobject">
+                          <img src="images/UsageXooNIpsCheck.gif" />
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </li>
+                <li class="listitem">
+                  <p>以上でインポートが完了します．</p>
+                  <div class="blockquote">
+                    <blockquote class="blockquote">
+                      <div class="informalfigure">
+                        <div class="mediaobject">
+                          <img src="images/UsageXooNIpsResults.gif" />
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="section" id="usage.import4.0">
+            <div xmlns="" class="titlepage">
+              <div>
+                <div>
+                  <h3 xmlns="http://www.w3.org/1999/xhtml" class="title">3.2. XooNIps バージョン4.0</h3>
+                </div>
+              </div>
+            </div>
+            <div class="orderedlist">
+              <ol class="orderedlist" type="1">
+                <li class="listitem">
+                  <p>ユーザメニューから『アイテムインポート』を選択します．</p>
+                  <div class="blockquote">
+                    <blockquote class="blockquote">
+                      <div class="informalfigure">
+                        <div class="mediaobject">
+                          <img src="images/UsageXooNIpsUserMenu40.gif" />
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </li>
+                <li class="listitem">
+                  <p><span class="application">XooNIps</span> のインポート形式のファイルおよびインポート先インデックスを指定し，『登録』ボタンを押下します．</p>
+                  <div class="blockquote">
+                    <blockquote class="blockquote">
+                      <div class="informalfigure">
+                        <div class="mediaobject">
+                          <img src="images/UsageXooNIpsMain40.gif" />
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </li>
+                <li class="listitem">
+                  <p>以上でインポートが完了します．</p>
+                  <div class="blockquote">
+                    <blockquote class="blockquote">
+                      <div class="informalfigure">
+                        <div class="mediaobject">
+                          <img src="images/UsageXooNIpsResults40.gif" />
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div xmlns="http://www.w3.org/1999/xhtml" class="navfooter">
+        <hr />
+        <table width="100%" summary="Navigation footer">
+          <tr>
+            <td width="40%" align="left"><a accesskey="p" href="intro.html"><img src="images/etc/prev.gif" alt="戻る" /></a> </td>
+            <td width="20%" align="center"> </td>
+            <td width="40%" align="right"> <a accesskey="n" href="sample.html"><img src="images/etc/next.gif" alt="次へ" /></a></td>
+          </tr>
+          <tr>
+            <td width="40%" align="left" valign="top"> </td>
+            <td width="20%" align="center">
+              <a accesskey="h" href="index.html">
+                <img src="images/etc/home.gif" alt="ホーム" />
+              </a>
+            </td>
+            <td width="40%" align="right" valign="top"> </td>
+          </tr>
+        </table>
+      </div>
+      <div class="lastupdated">Last updated: 2016/08/21</div>
+    </div>
+  </body>
+</html>

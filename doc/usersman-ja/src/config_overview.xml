@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="config.overview">
+  <title>プログラムの動作概要</title>
+  <para>本プログラムの内部では，入力された 『Excel ファイル』のデータを『<link linkend="config.inifile">INI ファイル</link>』に従い解析，結果を『<link linkend="config.tmplfile">XML テンプレートファイル</link>』に適用，全てのデータを ZIPにまとめる動作を行います．</para>
+  <blockquote>
+    <informalfigure>
+      <mediaobject>
+        <imageobject role="fo">
+          <imagedata fileref="images/ConfigOverview.gif" format="GIF" width="91.2mm"/> <!-- 608px * 0.15 = 91.2mm -->
+        </imageobject>
+        <imageobject role="html">
+          <imagedata fileref="images/ConfigOverview.gif"/>
+        </imageobject>
+      </mediaobject>
+    </informalfigure>
+  </blockquote>
+  <para>『INI ファイル』および『XML テンプレートファイル』は Windows の場合，<application>excel2xoonips.exe</application> の実行プログラムのあるディレクトリ下の 『etc』 ディレクトリを参照します．それ以外の OS の場合は，コンパイル時に <application>configure</application> スクリプトの引数 --sysconfdir で指定したディレクトリを参照します．</para>
+</section>

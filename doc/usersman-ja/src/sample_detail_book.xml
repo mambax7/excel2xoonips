@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.detail.book">
+  <title><filename>book.xls</filename></title>
+  <para><application>XooNIps v4.0</application> の Book アイテムのサンプルデータファイルです．</para>
+  <para>xnpbook アイテムタイプモジュールのバージョン 4.0 以降に対応しています．</para>
+  <para>このアイテムタイプの認識名は book です．</para>
+  <para>縦列に以下の項目持ちます．</para>
+  <orderedlist>
+    <listitem>
+      <para>ID</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ID』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.doi"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>言語</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『言語』フィールドに入力する選択肢です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.lang"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>ISBN</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ISBN』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>タイトル</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『タイトル』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>フリーキーワード</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『フリーキーワード』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>概要</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『概要』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>著者</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『著者』フィールドに入力する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>編集者</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『編集者』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>出版社</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『出版社』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>出版年</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『出版年』フィールドに入力する一行の整数値です．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>URL</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『URL』フィールドに入力する一行の文字列です．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>PDF ファイルパス</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『PDF ファイル』フィールドに入力するファイルの<emphasis role="strong">ファイルパス</emphasis>です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.file"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>ダウンロード制限</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ダウンロード制限』フィールドに入力する論理選択肢です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.download_limit"/>』を参照してください．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>ダウンロード通知</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムの『ダウンロード通知』フィールドに入力する論理選択肢です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.download_notify"/>』を参照してください．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>インデックス</para>
+      <itemizedlist>
+	<listitem>
+	  <para>アイテムを関連付ける『インデックス』を指定する<emphasis role="strong">複数行</emphasis>の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>詳細は『<xref linkend="sample.field.index"/>』を参照してください．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+  </orderedlist>
+</section>

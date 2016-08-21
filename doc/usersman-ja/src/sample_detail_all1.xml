@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.detail.all1">
+  <title><filename>all1.xls</filename></title>
+  <para><application>XooNIps v3.4</application> の全アイテムタイプ (Article, Book, Conference, Data, File, Memo, Model, Paper, Presentation, Simulator, Stimulus, Tool, Url) のサンプルデータファイルです．</para>
+  <para>このファイルはアイテムタイプ毎に Excel のシートが準備されています．また，関連付けるインデックス情報をデータに含んでいるため，このサンプルを変換し，<application>XooNIps</application> へインポートする際はインポート先インデックスを指定しないで下さい．</para>
+</section>

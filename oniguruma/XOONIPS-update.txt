@@ -1,0 +1,7 @@
+tar zxvf onig-5.9.6.tar.gz
+cd onig-5.9.6
+mkdir orig
+mv Makefile.am config.sub depcomp missing \
+   Makefile.in config.guess configure install-sh onig-config.in \
+   aclocal.m4 config.h.in configure.in ltmain.sh \
+   testc.c testu.c sample win32 doc orig

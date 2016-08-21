@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<book lang="ja">
+  <title><application>excel2xoonips</application></title>
+  <bookinfo>
+    <subtitle>利用手引き</subtitle>
+    <edition>1.0.2</edition>
+    <corpauthor>Neuroinformatics Japan Center</corpauthor>
+    <mediaobject>
+      <imageobject role="fo">
+	<imagedata fileref="../xsl/fo-etc/TitlePage.gif" format="GIF" width="160mm"/>
+      </imageobject>
+      <imageobject role="html">
+	<imagedata fileref="images/etc/logo.gif"/>
+      </imageobject>
+    </mediaobject>
+    <copyright>
+      <year>2008</year>
+      <year>2015</year>
+      <holder>RIKEN (The Institute of Physical and Chemical Science Research)</holder>
+    </copyright>
+    <abstract>
+      <para><emphasis role="underline"><application>excel2xoonips</application>による <application>XooNIps</application> へのデータの一括登録</emphasis></para>
+    </abstract>
+  </bookinfo>
+
+  <xi:include href='intro.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='usage.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='sample.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='config.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+  <xi:include href='copyright.xml' xmlns:xi='http://www.w3.org/2001/XInclude'/>
+
+</book>

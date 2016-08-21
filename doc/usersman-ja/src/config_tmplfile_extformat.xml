@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="config.tmplfile_extformat">
+  <title>拡張書式</title>
+
+  <simplesect>
+    <title>データセット領域 dataset</title>
+    <para>複数のセルの配列データを配列個数分繰り返しテンプレートに置換したい場合にデータセット領域を利用することができます．</para>
+    <para>以下の様な拡張書式を用います．</para>
+    <para><programlisting><![CDATA[<{dataset $group}>
+<group>
+  <data><{$data}></data>
+  <name><{$name}></name>
+</group>
+<{/dataset}>]]></programlisting></para>
+    <para>ここで $group はデータセット領域名，$data, $name 領域内フィールド名を表します．INI ファイル内で領域内フィールド名を指定したセルのデータタイプとして dataset の指定がされている場合，対応するデータセット領域名の <![CDATA[<{dataset $group}>]]>〜<![CDATA[<{/dataset}>]]> の中身が Excel 表のセルの配列回数分置換されます．</para>
+  </simplesect>
+
+  <simplesect>
+    <title>行セット領域 rowset</title>
+    <para>複数の行のデータを一つのテンプレートに置換する場合に利用します．</para>
+    <para>以下の様な拡張書式を用います．</para>
+    <para><programlisting><![CDATA[<{rowset}>
+<index parent_id="<{$parent_id}>" id="<{$index_id}>">
+  <title><{$title}></title>
+</index>
+<{/rowset}>]]></programlisting></para>
+    <para>この機能は，インデックスの変換のみに利用しており，アイテムの変換には利用できません．</para>
+  </simplesect>
+</section>

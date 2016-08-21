@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" >
+
+<section id="sample.detail.index">
+  <title><filename>index.xls</filename></title>
+  <para>インデックスのサンプルデータファイルです．</para>
+  <para>XooNIps のバージョン 3.41 以降に対応しています．</para>
+  <para>この認識名は index です．</para>
+  <para>このサンプルを変換し，インポートする際は親となるインデックスを指定してください．</para>
+  <para>縦列に以下の項目持ちます．</para>
+  <orderedlist>
+    <listitem>
+      <para>インデックスID</para>
+      <itemizedlist>
+	<listitem>
+	  <para>この Excel ファイル内でインデックスを識別するための整数値で，他の行と異なる数値を割り当てる必要があります．</para>
+	</listitem>
+	<listitem>
+	  <para>通常は 1から順にデータの数だけ数値を割り振ってください．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>インデックス名</para>
+      <itemizedlist>
+	<listitem>
+	  <para>インポート時に作成する『インデックス名』の一行の文字列です．</para>
+	</listitem>
+	<listitem>
+	  <para>ここでは親インデックスを含まない個々の階層の『インデックス名』を指定します．階層構造を表現するには『親インデックスID』を指定してください．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+    <listitem>
+      <para>親インデックスID</para>
+      <itemizedlist>
+	<listitem>
+	  <para>この Excel ファイル内で階層構造を表現するための整数値です．</para>
+	</listitem>
+	<listitem>
+	  <para>親となるインデックスの『インデックスID』を指定します．ここで 0 を指定するとインポート時に指定したインデックスが親のインデックスとなります．</para>
+	</listitem>
+	<listitem>
+	  <para>この項目は<emphasis role="strong">入力を必須</emphasis>としています．</para>
+	</listitem>
+      </itemizedlist>
+    </listitem>
+  </orderedlist>
+</section>
