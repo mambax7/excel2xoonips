@@ -30,9 +30,7 @@ dist_sysconf_DATA = \
   3.4/xnptool.ini \
   3.4/xnptool.tmpl \
   3.4/xnpurl.ini \
-  3.4/xnpurl.tmpl
-  
-  dist_sysconf_DATA2 = \
+  3.4/xnpurl.tmpl \
   4.0/article.ini \
   4.0/article.tmpl \
   4.0/binder.ini \
