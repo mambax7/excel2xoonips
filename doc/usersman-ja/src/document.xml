@@ -6,7 +6,7 @@
   <title><application>excel2xoonips</application></title>
   <bookinfo>
     <subtitle>利用手引き</subtitle>
-    <edition>1.0.2</edition>
+    <edition>2.0.0</edition>
     <corpauthor>Neuroinformatics Japan Center</corpauthor>
     <mediaobject>
       <imageobject role="fo">
@@ -18,7 +18,7 @@
     </mediaobject>
     <copyright>
       <year>2008</year>
-      <year>2015</year>
+      <year>2016</year>
       <holder>RIKEN (The Institute of Physical and Chemical Science Research)</holder>
     </copyright>
     <abstract>
