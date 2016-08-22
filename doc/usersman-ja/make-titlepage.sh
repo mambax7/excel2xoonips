@@ -7,11 +7,13 @@ CONFIG_INI="${DOC_BASE_DIR}/config.ini"
 
 TEMP_DIR=${DOC_BASE_DIR}/temp
 
-if test -f ${CONFIG_INI}; then
-  eval `cat ${CONFIG_INI}`
-  export SGML_CATALOG_FILES
-  export XSL_STYLESHEETS_DIR
+if test ! -f ${CONFIG_INI}; then
+  CONFIG_INI="${DOC_BASE_DIR}/config.dist.ini"
 fi
+. "${CONFIG_INI}"
+export SGML_CATALOG_FILES
+export XSL_STYLESHEETS_DIR
+
 if test -z "${SGML_CATALOG_FILES}"; then
   echo "Error: set SGML_CATALOG_FILES environment variable"
   exit 1;

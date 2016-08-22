@@ -9,12 +9,14 @@ LINT=${DOC_BASE_DIR}/docbook-lint.sh
 MAKE_TITLEPAGE=${DOC_BASE_DIR}/make-titlepage.sh
 TEMP_DIR=${DOC_BASE_DIR}/temp
 
-if test -f ${CONFIG_INI}; then
-  eval `cat ${CONFIG_INI}`
-  export SGML_CATALOG_FILES
-  export XSL_STYLESHEETS_DIR
-  export XSL_STYLESHEETS_DIR_WIN32
+if test ! -f ${CONFIG_INI}; then
+  CONFIG_INI="${DOC_BASE_DIR}/config.dist.ini"
 fi
+. "${CONFIG_INI}"
+export SGML_CATALOG_FILES
+export XSL_STYLESHEETS_DIR
+export XSL_STYLESHEETS_DIR_WIN32
+
 if test -z "${SGML_CATALOG_FILES}"; then
   echo "Error: set SGML_CATALOG_FILES environment variable"
   exit 1;
