@@ -2,7 +2,7 @@
 		xmlns:fo="http://www.w3.org/1999/XSL/Format"
 		version='1.0'>
 
-<xsl:import  href="@XSL_STYLESHEETS_DIR_WIN32@/fo/docbook.xsl"/>
+<xsl:import  href="@XSL_STYLESHEETS_DIR@/fo/docbook.xsl"/>
 <!--  <xsl:import  href="unfill.xsl"/> -->
 <xsl:include href="fo-titlepage.xsl"/>
 

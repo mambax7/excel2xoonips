@@ -2,6 +2,7 @@
 
 DOC_BASE_DIR="`dirname $0`"
 
+XSLTPROC=xsltproc
 DOCUMENT=${DOC_BASE_DIR}/src/document.xml
 
 CONFIG_INI="${DOC_BASE_DIR}/config.ini"
@@ -15,7 +16,6 @@ fi
 . "${CONFIG_INI}"
 export SGML_CATALOG_FILES
 export XSL_STYLESHEETS_DIR
-export XSL_STYLESHEETS_DIR_WIN32
 
 if test -z "${SGML_CATALOG_FILES}"; then
   echo "Error: set SGML_CATALOG_FILES environment variable"
@@ -40,10 +40,10 @@ if [ ${RETVAL} -ne 0 ]; then
   exit 1;
 fi
 
-sed -e "s+@XSL_STYLESHEETS_DIR_WIN32@+${XSL_STYLESHEETS_DIR_WIN32}+g" ${DOC_BASE_DIR}/xsl/axf.xsl.in > ${TEMP_DIR}/axf.xsl
+sed -e "s+@XSL_STYLESHEETS_DIR@+${XSL_STYLESHEETS_DIR}+g" ${DOC_BASE_DIR}/xsl/axf.xsl.in > ${TEMP_DIR}/axf.xsl
 
 rm -f ${TEMP_DIR}/images
 ln -s ../src/images ${TEMP_DIR}
-xmllint --xinclude --postvalid --catalogs ${DOCUMENT} > "${TEMP_DIR}/document.xml"
+"${XSLTPROC}" --xinclude --nonet --catalogs -o "${TEMP_DIR}/document.fo" "${TEMP_DIR}/axf.xsl" "${DOCUMENT}"
 
 exit 0
