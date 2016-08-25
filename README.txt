@@ -20,7 +20,7 @@ Import Excel data to XooNIps:
  2) import converted "XooNIps import file" on XooNIps using web browser
     
 Change Logs:
-  2016-08-21  2.0.0
+  2016-08-25  2.0.0
    * supported xoonips version 4.x
   2009-11-26  1.0.2
    * fixed bug for single quote ' handling.
