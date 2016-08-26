@@ -37,7 +37,7 @@
     
     <section id="intro.install.windows">
       <title>Windows</title>
-      <para>Windows 用には，実行形式のパッケージ <filename>excel2xoonips-1.0.2-win32.zip</filename> が用意されています．</para>
+      <para>Windows 用には，実行形式のパッケージ <filename>excel2xoonips-2.0.0-win64.zip</filename> および <filename>excel2xoonips-2.0.0-win32.zip</filename> が用意されています．</para>
       <para>ダウンロード後，Zip ファイルを任意のディレクトリに展開することにより利用可能となります．</para>
       
       <blockquote>
@@ -57,21 +57,21 @@
     
     <section id="intro.install.others">
       <title>その他の OS</title>
-      <para>その他の OS 用には，tar.gz 形式で圧縮されたソースファイル一式 <filename>excel2xoonips-1.0.2.tar.gz</filename> が用意されており，ソースコードからコンパイルを行う必要があります．</para>
+      <para>その他の OS 用には，tar.gz 形式で圧縮されたソースファイル一式 <filename>excel2xoonips-2.0.0.tar.gz</filename> が用意されており，ソースコードからコンパイルを行う必要があります．</para>
       <orderedlist>
         <listitem>
-          <para>ソースコード <filename>excel2xoonips-1.0.2.tar.gz</filename> をダウンロードします．</para>
+          <para>ソースコード <filename>excel2xoonips-2.0.0.tar.gz</filename> をダウンロードします．</para>
         </listitem>
         <listitem>
           <para>ダウンロードしたソースコードを展開します. </para>
           <blockquote>
-            <para><programlisting><![CDATA[$ tar zxvf excel2xoonips-1.0.2.tar.gz]]></programlisting></para>
+            <para><programlisting><![CDATA[$ tar zxvf excel2xoonips-2.0.0.tar.gz]]></programlisting></para>
           </blockquote>
         </listitem>
         <listitem>
           <para>展開されたディレクトリに移動し，configure スクリプトを実行します. </para>
           <blockquote>
-            <para><programlisting><![CDATA[$ cd excel2xoonips-1.0.2
+            <para><programlisting><![CDATA[$ cd excel2xoonips-2.0.0
 $ ./configure]]></programlisting></para>
           </blockquote>
           <para>このとき，configure スクリプトには，実行時の引数にインストール先(--prefix)や依存する libiconv ライブラリのパス (--with-libiconv-prefix)，実行する OS のファイルシステムで利用している文字コード(--with-filename-coding-system) などを指定することができます．詳しくは以下のコマンドを実行してみて下さい．</para>
