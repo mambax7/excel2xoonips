@@ -567,7 +567,6 @@ uninstall-am:
 dist-hook:
 	for i in $(MYDIST_SUBDIRS); do \
 	  cp -r $(srcdir)/$$i $(distdir); \
-	  rm -rf `find $(distdir)/$$i -name 'CVS'`; \
 	done
 #AM_CFLAGS = -Wall -Wcast-align -Wpointer-arith 
 

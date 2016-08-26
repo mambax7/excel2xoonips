@@ -34,6 +34,5 @@ EXTRA_DIST = HISTORY README.ja index.html index_ja.html \
 
 dist-hook:
 	cp -r $(srcdir)/orig $(distdir)
-	rm -rf `find $(distdir)/orig -name 'CVS'`
 
 ## END OF FILE

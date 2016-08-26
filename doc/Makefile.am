@@ -11,4 +11,5 @@ dist_data_DATA = \
 
 dist-hook:
 	cp -r $(srcdir)/usersman-ja $(distdir)
-	rm -rf `find $(distdir)/usersman-ja -name 'CVS'`
+	rm -rf $(distdir)/usersman-ja/html/*
+	rm -rf $(distdir)/usersman-ja/temp/*

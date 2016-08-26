@@ -7,7 +7,6 @@ MYDIST_SUBDIRS = doc examples utils
 dist-hook:
 	for i in $(MYDIST_SUBDIRS); do \
 	  cp -r $(srcdir)/$$i $(distdir); \
-	  rm -rf `find $(distdir)/$$i -name 'CVS'`; \
 	done
 
 noinst_LIBRARIES = libcole.a 

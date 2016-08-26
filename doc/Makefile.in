@@ -482,7 +482,8 @@ uninstall-am: uninstall-dist_dataDATA
 
 dist-hook:
 	cp -r $(srcdir)/usersman-ja $(distdir)
-	rm -rf `find $(distdir)/usersman-ja -name 'CVS'`
+	rm -rf $(distdir)/usersman-ja/html/*
+	rm -rf $(distdir)/usersman-ja/temp/*
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
