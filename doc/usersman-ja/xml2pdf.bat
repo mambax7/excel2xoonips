@@ -3,7 +3,7 @@ setlocal
 
 rem   XSL Formmatter
 
-XSLCmd -d pdf\document.fo -o pdf\usersmanual-ja.pdf
+XSLCmd -d temp\document.fo -o usersmanual-ja.pdf
 
 pause
 endlocal
