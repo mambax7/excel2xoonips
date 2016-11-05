@@ -50,6 +50,7 @@ sl4_string_t *tmpl_file_get( const char *text, strarray_t * options,
   sl4_string_t *tmp;
   size_t pos;
   int occurrence_no;
+  int is_remote;
   char tmp_str1[128];
   const char *file_tag_fmt_v40 =
     "<C:%s C:type=\"file\" C:column_name=\"file_id\">\n"
@@ -124,79 +125,118 @@ sl4_string_t *tmpl_file_get( const char *text, strarray_t * options,
         }
     	  }
 #endif /* WIN32 */
-      _file = sl4_file_new( sl4_string_get( file_path ) );
-      if ( _file == NULL ) {
-        ERROR_OUTMEM(  );
-      }
 
-      /* check file exists */
-      if ( sl4_file_is_readable( _file ) == 0 ) {
-        /* file not found */
-        sl4_string_delete( str );
-        sl4_string_delete( _text );
-        sl4_string_delete( file_path );
-        sl4_string_delete( tmp );
-        sl4_file_delete( _file );
-        return NULL;
-      }
-
-      fsize = sl4_file_get_size( _file );
-      _file_size = sl4_string_new( NULL );
-      if ( _file_size == NULL ) {
-        ERROR_OUTMEM(  );
-      }
-      if ( sl4_string_sprintf( _file_size, "%ld", fsize ) != 0 ) {
-        ERROR_OUTMEM(  );
-      }
-      _mime_type = sl4_file_get_mimetype( _file, &_suffix );
-      _original_file_name = sl4_string_new( sl4_file_get_name( _file ) );
-      if ( _original_file_name == NULL ) {
-        ERROR_OUTMEM(  );
-      }
-
-      _file_name_inzip = sl4_string_new( NULL );
-      if ( _file_name_inzip == NULL ) {
-        ERROR_OUTMEM(  );
-      }
-      if (!is_compat){
-        if ( sl4_string_sprintf
-             ( _file_name_inzip, "%d/%s", files_count, sl4_string_get(_original_file_name)) != 0 ) {
+      /* check internet schema (file://, etc). it is server side file path */
+      if ( ! is_compat &&
+           ( sl4_string_find( file_path, "file://" ) == 0 ||
+             sl4_string_find( file_path, "http://" ) == 0 ||
+             sl4_string_find( file_path, "https://" ) == 0 ||
+             sl4_string_find( file_path, "ftp://" ) == 0 ) ) {
+        is_remote = 1;
+        _file = NULL;
+        _file_size = sl4_string_new( NULL );
+        if ( _file_size == NULL ) {
           ERROR_OUTMEM(  );
         }
-      }else{
-        if ( sl4_string_sprintf
-             ( _file_name_inzip, "files/%s_%s", sname, address ) != 0 ) {
+        _mime_type = sl4_string_new( NULL );
+        if ( _mime_type == NULL ) {
           ERROR_OUTMEM(  );
+        }
+        _original_file_name = sl4_string_new( sl4_string_get( file_path ) );
+        if ( _original_file_name == NULL ) {
+          ERROR_OUTMEM(  );
+        }
+        _file_name_inzip = sl4_string_new( NULL );
+        if ( _file_name_inzip == NULL ) {
+          ERROR_OUTMEM(  );
+        }
+        _suffix = sl4_string_new( NULL );
+        if ( _suffix == NULL ) {
+          ERROR_OUTMEM(  );
+        }
+
+      } else {
+         is_remote = 0;
+        _file = sl4_file_new( sl4_string_get( file_path ) );
+        if ( _file == NULL ) {
+          ERROR_OUTMEM(  );
+        }
+
+        /* check file exists */
+        if ( sl4_file_is_readable( _file ) == 0 ) {
+          /* file not found */
+          sl4_string_delete( str );
+          sl4_string_delete( _text );
+          sl4_string_delete( file_path );
+          sl4_string_delete( tmp );
+          sl4_file_delete( _file );
+          return NULL;
+        }
+
+        fsize = sl4_file_get_size( _file );
+        _file_size = sl4_string_new( NULL );
+        if ( _file_size == NULL ) {
+          ERROR_OUTMEM(  );
+        }
+        if ( sl4_string_sprintf( _file_size, "%ld", fsize ) != 0 ) {
+          ERROR_OUTMEM(  );
+        }
+        _mime_type = sl4_file_get_mimetype( _file, &_suffix );
+        _original_file_name = sl4_string_new( sl4_file_get_name( _file ) );
+        if ( _original_file_name == NULL ) {
+          ERROR_OUTMEM(  );
+        }
+
+        _file_name_inzip = sl4_string_new( NULL );
+        if ( _file_name_inzip == NULL ) {
+          ERROR_OUTMEM(  );
+        }
+        if ( ! is_compat ) {
+          /* for v4 */
+          if ( sl4_string_sprintf
+               ( _file_name_inzip, "%d/%s", files_count, sl4_string_get(_original_file_name)) != 0 ) {
+            ERROR_OUTMEM(  );
+          }
+        } else {
+          /* for v3 */
+          if ( sl4_string_sprintf
+               ( _file_name_inzip, "files/%s_%s", sname, address ) != 0 ) {
+            ERROR_OUTMEM(  );
+          }
         }
       }
       if ( is_compat ) {
-          if ( sl4_string_sprintf
-               ( tag, file_tag_fmt, item_id, sl4_string_get( file_type_name ),
-                 sl4_string_get( _original_file_name ),
-                 sl4_string_get( _file_name_inzip ), sl4_string_get( _file_size ),
-                 sl4_string_get( _mime_type ) ) != 0 ) {
-            ERROR_OUTMEM(  );
-          }
-      } else {
-          if ( sl4_string_sprintf
-               ( tag, file_tag_fmt_v40, item_xml, sl4_string_get( _original_file_name ), files_count,
-                 sl4_string_get( _mime_type ), sl4_string_get( _file_size ), occurrence_no, item_xml) != 0 ) {
-            ERROR_OUTMEM(  );
-          }
-          occurrence_no++;
-      }
-      if ( !is_compat ) {
-        /* mkdir file temporary dicrectory */
-        sprintf(tmp_str1, "/%d", files_count);
-        tempdir_mkdir( tmpdir, tmp_str1 );
-        files_count++;
-
-        /* copy file to temporary directory */
-        if ( tempdir_copyfile
-             ( tmpdir, sl4_file_get_path( _file ),
-             sl4_string_get(_file_name_inzip) ) != 0 ) {
-          ERROR_UNEXPECTED(  );
+        /* for v3 */
+        if ( sl4_string_sprintf
+             ( tag, file_tag_fmt, item_id, sl4_string_get( file_type_name ),
+               sl4_string_get( _original_file_name ),
+               sl4_string_get( _file_name_inzip ), sl4_string_get( _file_size ),
+               sl4_string_get( _mime_type ) ) != 0 ) {
+          ERROR_OUTMEM(  );
         }
+      } else {
+        /* for v4 */
+        if ( sl4_string_sprintf
+             ( tag, file_tag_fmt_v40, item_xml, sl4_string_get( _original_file_name ), files_count,
+               sl4_string_get( _mime_type ), sl4_string_get( _file_size ), occurrence_no, item_xml) != 0 ) {
+          ERROR_OUTMEM(  );
+        }
+        occurrence_no++;
+
+        if ( is_remote == 0 ) {
+          /* mkdir file temporary dicrectory */
+          sprintf(tmp_str1, "/%d", files_count);
+          tempdir_mkdir( tmpdir, tmp_str1 );
+
+          /* copy file to temporary directory */
+          if ( tempdir_copyfile
+               ( tmpdir, sl4_file_get_path( _file ),
+               sl4_string_get(_file_name_inzip) ) != 0 ) {
+            ERROR_UNEXPECTED(  );
+          }
+        }
+
+        files_count++;
       }
       sl4_string_append( str, sl4_string_get( tag ) );
       sl4_string_delete( tag );
@@ -204,18 +244,20 @@ sl4_string_t *tmpl_file_get( const char *text, strarray_t * options,
       sl4_string_delete( file_path );
       tmp = sl4_string_tokenize( _text, "\n", &pos );
       if ( tmp ) {
+          if ( _file != NULL ) {
+            sl4_file_delete( _file );
+          }
+          sl4_string_delete( _file_name_inzip );
+          sl4_string_delete( _original_file_name );
+          sl4_string_delete( _mime_type );
+          sl4_string_delete( _file_size );
+          sl4_string_delete( _suffix );
           if ( is_compat || strcmp(item_xml, "image") != 0  || strcmp(sname, "url") == 0 ) {
               sl4_string_delete( str );
               sl4_string_delete( tmp );
               sl4_string_delete( _text );
             return NULL;
           }
-          sl4_file_delete( _file );
-          sl4_string_delete( _file_name_inzip );
-          sl4_string_delete( _original_file_name );
-          sl4_string_delete( _mime_type );
-          sl4_string_delete( _file_size );
-          sl4_string_delete( _suffix );
       }
   }
   /* release unused memory */

@@ -274,7 +274,9 @@ int template_assign( template_t * tmpl, cexcel_sheet_t * sheet,
               }
           }
           sl4_string_delete( file_name_inzip );
-          sl4_file_delete( file );
+          if ( file != NULL ) {
+              sl4_file_delete( file );
+          }
         } else {
           original_file_name = sl4_string_new( NULL );
           mime_type = sl4_string_new( NULL );
