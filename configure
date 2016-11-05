@@ -9923,7 +9923,7 @@ ZLIB_LIBS="\$(top_builddir)/zlib/libz.a"
 
 
 # for excel2xoonips
-E2X_CONFIG_PATH=$sysconfdir
+E2X_CONFIG_PATH=$sysconfdir/${PACKAGE}
 
 
 # Check whether --with-filename_coding_system was given.
@@ -9950,7 +9950,7 @@ fi
 E2X_FILENAME_CODING_SYSTEM=$filename_coding_system
 
 
-ac_config_files="$ac_config_files Makefile etc/Makefile doc/Makefile sample/Makefile sample/data/Makefile cole/Makefile cole/version.c cole/cole.h libsl4/Makefile cexcel/Makefile oniguruma/Makefile zlib/Makefile excel2xoonips/Makefile"
+ac_config_files="$ac_config_files Makefile etc/Makefile etc/3.4/Makefile etc/4.0/Makefile doc/Makefile sample/Makefile sample/data/Makefile cole/Makefile cole/version.c cole/cole.h libsl4/Makefile cexcel/Makefile oniguruma/Makefile zlib/Makefile excel2xoonips/Makefile"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -10685,6 +10685,8 @@ do
     "config.h") CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "etc/Makefile") CONFIG_FILES="$CONFIG_FILES etc/Makefile" ;;
+    "etc/3.4/Makefile") CONFIG_FILES="$CONFIG_FILES etc/3.4/Makefile" ;;
+    "etc/4.0/Makefile") CONFIG_FILES="$CONFIG_FILES etc/4.0/Makefile" ;;
     "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
     "sample/Makefile") CONFIG_FILES="$CONFIG_FILES sample/Makefile" ;;
     "sample/data/Makefile") CONFIG_FILES="$CONFIG_FILES sample/data/Makefile" ;;

@@ -98,7 +98,7 @@ AC_SUBST([ZLIB_CFLAGS])
 AC_SUBST([ZLIB_LIBS])
 
 # for excel2xoonips
-E2X_CONFIG_PATH=$sysconfdir
+E2X_CONFIG_PATH=$sysconfdir/${PACKAGE}
 AC_SUBST([E2X_CONFIG_PATH])
 AC_ARG_WITH(filename_coding_system,
             [  --with-filename-coding-system=encoding  set file name coding system],
@@ -120,5 +120,5 @@ fi
 E2X_FILENAME_CODING_SYSTEM=$filename_coding_system
 AC_SUBST([E2X_FILENAME_CODING_SYSTEM])
 
-AC_CONFIG_FILES([Makefile etc/Makefile doc/Makefile sample/Makefile sample/data/Makefile cole/Makefile cole/version.c cole/cole.h libsl4/Makefile cexcel/Makefile oniguruma/Makefile zlib/Makefile excel2xoonips/Makefile])
+AC_CONFIG_FILES([Makefile etc/Makefile etc/3.4/Makefile etc/4.0/Makefile doc/Makefile sample/Makefile sample/data/Makefile cole/Makefile cole/version.c cole/cole.h libsl4/Makefile cexcel/Makefile oniguruma/Makefile zlib/Makefile excel2xoonips/Makefile])
 AC_OUTPUT
