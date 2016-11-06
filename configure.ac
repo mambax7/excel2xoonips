@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.63)
-AC_INIT(excel2xoonips, 2.0.0, okumura@brain.riken.jp)
-AC_REVISION($Id: configure.ac,v 1.2 2016/08/18 05:25:57 orrisroot Exp $)
+AC_INIT(excel2xoonips, 2.0.1, okumura@brain.riken.jp)
+AC_REVISION([m4_esyscmd_s([git describe --always])])
 
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_AUX_DIR([config])
