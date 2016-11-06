@@ -1,4 +1,4 @@
-excel2xoonips 2.0.0 : A data convertor from Excel data to XooNIps import file.
+excel2xoonips 2.0.1 : A data convertor from Excel data to XooNIps import file.
 
 Copyright (C) 2007-2016 RIKEN, Japan All rights reserved.
 
@@ -20,6 +20,8 @@ Import Excel data to XooNIps:
  2) import converted "XooNIps import file" on XooNIps using web browser
     
 Change Logs:
+  2016-11-06  2.0.1
+   * supported file:// schema to load data file on server side.
   2016-08-25  2.0.0
    * supported xoonips version 4.x
   2009-11-26  1.0.2
