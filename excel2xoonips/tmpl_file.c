@@ -252,7 +252,7 @@ sl4_string_t *tmpl_file_get( const char *text, strarray_t * options,
           sl4_string_delete( _mime_type );
           sl4_string_delete( _file_size );
           sl4_string_delete( _suffix );
-          if ( is_compat || strcmp(item_xml, "image") != 0  || strcmp(sname, "url") == 0 ) {
+          if ( is_compat ) {
               sl4_string_delete( str );
               sl4_string_delete( tmp );
               sl4_string_delete( _text );
