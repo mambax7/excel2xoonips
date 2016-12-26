@@ -34,6 +34,7 @@ excel2xoonips_sources = \
   tmpl_bool.c \
   tmpl_integer.c \
   tmpl_string.c \
+  tmpl_datetime.c \
   tmpl_select.c \
   tmpl_array.c \
   tmpl_dataset.c \

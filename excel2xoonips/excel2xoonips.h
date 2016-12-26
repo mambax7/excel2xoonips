@@ -68,6 +68,7 @@ typedef enum {
   INIFILE_TYPE_BOOL,
   INIFILE_TYPE_INTEGER,
   INIFILE_TYPE_STRING,
+  INIFILE_TYPE_DATETIME,
   INIFILE_TYPE_ARRAY,
   INIFILE_TYPE_DATASET,
   INIFILE_TYPE_FILE,
@@ -123,6 +124,9 @@ sl4_string_t *tmpl_integer_get( const char *text, int is_required, char *item_xm
 
 /* tmpl_string.c */
 sl4_string_t *tmpl_string_get( const char *text, int is_required, char *item_xml );
+
+/* tmpl_datetime.c */
+sl4_string_t *tmpl_datetime_get( const char *text, int is_required, char *item_xml );
 
 /* tmpl_select.c */
 sl4_string_t *tmpl_select_get( const char *text, strarray_t * options,

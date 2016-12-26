@@ -34,6 +34,15 @@ XML テンプレートファイルの変数にそれぞれ置換されます．
     + bool
       - 論理値 (TRUE/FALSE)を受け付ける．
       - 変数へ置換する際はそれぞれ FALSE = 0, TRUE = 1 となる．
+    + datetime
+      - 日付文字列(yyyy-mm-dd hh:nn:ss)を受け付ける．
+        - yyyy-mm-dd hh:nn:ss
+        - yyyy/mm/dd hh:nn:ss
+        - yyyy-(jan,feb,...,dec)-dd hh:nn:ss
+        - yyyy-mm-dd
+        - yyyy/mm/dd
+        - yyyy-(jan,feb,...,dec)-dd
+      - 変数へ置換する際は timestamp 値となる．
     + select(a,b,c)
       - 指定された文字列の選択肢 a,b,c のいずれかを受け付ける．
       - a,b,c の部分は任意．

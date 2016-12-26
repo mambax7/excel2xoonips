@@ -245,6 +245,21 @@ int template_assign( template_t * tmpl, cexcel_sheet_t * sheet,
         sl4_string_delete( string_str );
       }
       break;
+    case INIFILE_TYPE_DATETIME:
+      {
+        sl4_string_t *datetime_str;
+        datetime_str = tmpl_datetime_get( text, inicol->is_required, item_xml );
+        if ( datetime_str == NULL ) {
+          sl4_string_sprintf( errmes,
+                              "Invalid Cell(%s) Found in Sheet \"%s\". Data Type is Not Integer.",
+                              address, sname );
+          return -1;
+        }
+        _template_assign_fields( rep_hash, inicol->field, datetime_str, 0,
+                                 NULL );
+        sl4_string_delete( datetime_str );
+      }
+      break;
     case INIFILE_TYPE_FILE:
       {
         sl4_string_t *file_str;

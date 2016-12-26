@@ -113,6 +113,7 @@ am__objects_1 = excel2xoonips-ioapi.$(OBJEXT) \
 	excel2xoonips-tmpl_bool.$(OBJEXT) \
 	excel2xoonips-tmpl_integer.$(OBJEXT) \
 	excel2xoonips-tmpl_string.$(OBJEXT) \
+	excel2xoonips-tmpl_datetime.$(OBJEXT) \
 	excel2xoonips-tmpl_select.$(OBJEXT) \
 	excel2xoonips-tmpl_array.$(OBJEXT) \
 	excel2xoonips-tmpl_dataset.$(OBJEXT) \
@@ -335,6 +336,7 @@ excel2xoonips_sources = \
   tmpl_bool.c \
   tmpl_integer.c \
   tmpl_string.c \
+  tmpl_datetime.c \
   tmpl_select.c \
   tmpl_array.c \
   tmpl_dataset.c \
@@ -449,6 +451,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/excel2xoonips-tmpl_array.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/excel2xoonips-tmpl_bool.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/excel2xoonips-tmpl_dataset.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/excel2xoonips-tmpl_datetime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/excel2xoonips-tmpl_file.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/excel2xoonips-tmpl_indexes.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/excel2xoonips-tmpl_integer.Po@am__quote@
@@ -696,6 +699,20 @@ excel2xoonips-tmpl_string.obj: tmpl_string.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tmpl_string.c' object='excel2xoonips-tmpl_string.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(excel2xoonips_CFLAGS) $(CFLAGS) -c -o excel2xoonips-tmpl_string.obj `if test -f 'tmpl_string.c'; then $(CYGPATH_W) 'tmpl_string.c'; else $(CYGPATH_W) '$(srcdir)/tmpl_string.c'; fi`
+
+excel2xoonips-tmpl_datetime.o: tmpl_datetime.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(excel2xoonips_CFLAGS) $(CFLAGS) -MT excel2xoonips-tmpl_datetime.o -MD -MP -MF $(DEPDIR)/excel2xoonips-tmpl_datetime.Tpo -c -o excel2xoonips-tmpl_datetime.o `test -f 'tmpl_datetime.c' || echo '$(srcdir)/'`tmpl_datetime.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/excel2xoonips-tmpl_datetime.Tpo $(DEPDIR)/excel2xoonips-tmpl_datetime.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tmpl_datetime.c' object='excel2xoonips-tmpl_datetime.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(excel2xoonips_CFLAGS) $(CFLAGS) -c -o excel2xoonips-tmpl_datetime.o `test -f 'tmpl_datetime.c' || echo '$(srcdir)/'`tmpl_datetime.c
+
+excel2xoonips-tmpl_datetime.obj: tmpl_datetime.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(excel2xoonips_CFLAGS) $(CFLAGS) -MT excel2xoonips-tmpl_datetime.obj -MD -MP -MF $(DEPDIR)/excel2xoonips-tmpl_datetime.Tpo -c -o excel2xoonips-tmpl_datetime.obj `if test -f 'tmpl_datetime.c'; then $(CYGPATH_W) 'tmpl_datetime.c'; else $(CYGPATH_W) '$(srcdir)/tmpl_datetime.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/excel2xoonips-tmpl_datetime.Tpo $(DEPDIR)/excel2xoonips-tmpl_datetime.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tmpl_datetime.c' object='excel2xoonips-tmpl_datetime.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(excel2xoonips_CFLAGS) $(CFLAGS) -c -o excel2xoonips-tmpl_datetime.obj `if test -f 'tmpl_datetime.c'; then $(CYGPATH_W) 'tmpl_datetime.c'; else $(CYGPATH_W) '$(srcdir)/tmpl_datetime.c'; fi`
 
 excel2xoonips-tmpl_select.o: tmpl_select.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(excel2xoonips_CFLAGS) $(CFLAGS) -MT excel2xoonips-tmpl_select.o -MD -MP -MF $(DEPDIR)/excel2xoonips-tmpl_select.Tpo -c -o excel2xoonips-tmpl_select.o `test -f 'tmpl_select.c' || echo '$(srcdir)/'`tmpl_select.c

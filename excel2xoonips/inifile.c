@@ -205,6 +205,8 @@ static inifile_column_t *_inifile_column_new( sl4_string_t *fields,
     col->type = INIFILE_TYPE_STRING;
   } else if ( sl4_string_compare( type, "int" ) == 0 ) {
     col->type = INIFILE_TYPE_STRING;
+  } else if ( sl4_string_compare( type, "datetime" ) == 0 ) {
+    col->type = INIFILE_TYPE_DATETIME;
   } else if ( sl4_string_compare( type, "indexes" ) == 0 ) {
     col->type = INIFILE_TYPE_INDEXES;
   } else if ( sl4_string_compare( type, "lang" ) == 0 ) {

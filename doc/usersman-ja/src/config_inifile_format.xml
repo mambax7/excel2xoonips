@@ -63,6 +63,17 @@
             </itemizedlist>
           </listitem>
           <listitem>
+            <para>datetime</para>
+            <itemizedlist>
+              <listitem>
+                <para>日付文字列を受け付ける</para>
+              </listitem>
+              <listitem>
+                <para>変数へ置換する際は timestamp 値となる．</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+          <listitem>
             <para>select(a,b,c)</para>
             <itemizedlist>
               <listitem>
