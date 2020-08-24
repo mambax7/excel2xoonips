@@ -30,8 +30,13 @@ void error_internal( ERROR_CODE errcode, const char *file, int line );
 #define ERROR_OUTMEM()    error_internal( ERROR_CODE_OUTMEM, __FILE__, __LINE__ )
 #define ERROR_UNEXPECTED()    error_internal( ERROR_CODE_UNEXPECTED, __FILE__, __LINE__ )
 
+#ifdef __MAIN_C__
 int is_compat;
 int files_count;
+#else
+extern int is_compat;
+extern int files_count;
+#endif
 
 /* strarray.c */
 typedef sl4_array_t strarray_t;

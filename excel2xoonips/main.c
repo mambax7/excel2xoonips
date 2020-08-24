@@ -33,6 +33,8 @@
 #include "libsl4.h"
 #include "cexcel.h"
 
+#define __MAIN_C__ 1
+
 #include "excel2xoonips.h"
 
 #define XLS2XNI_ERROR_SUCCESS  0
